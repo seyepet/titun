@@ -5,6 +5,7 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
+    @posts = Posts.all
   end
 
   # GET /people/1
@@ -69,6 +70,6 @@ class PeopleController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def person_params
-      params.require(:person).permit(:name)
+      params.require(:person).permit(:name, :posts)
     end
 end
