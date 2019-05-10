@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
+  # before_action :authenticate_user!, except: [:show, :index]
+  prepend_before_action :require_no_authentication, only: :cancel
 
   # GET /posts
   # GET /posts.json
@@ -29,8 +30,8 @@ class PostsController < ApplicationController
     @post = current_user
 
     respond_to do |format|
-      if @post.save
-        format.html { redirect_to @root, notice: 'Post was successfully created.' }
+      if  @post.save
+        format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }

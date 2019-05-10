@@ -29,6 +29,12 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
+  
+  Recaptcha.configure do |config|
+  ENV_RECAPTCHA_PUBLIC_KEY  = "6LdP5qIUAAAAAFVExXEqREEvLHXv1wFjw-Wn_iW0"
+  ENV_RECAPTCHA_PRIVATE_KEY = "6LdP5qIUAAAAAKgNwP4t-yfsxiBAFHYI4FB7Gd-x"
+  end
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
