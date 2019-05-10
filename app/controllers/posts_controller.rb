@@ -74,4 +74,11 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body)
     end
+    
+    
+    def submit
+    SiteMailer.notify(params).deliver unless params[:content].present? # honeypot check
+    flash[:success] = "Your message has been submitted. Thank you!"
+    redirect_to root_url
+    end
 end

@@ -72,4 +72,11 @@ class PeopleController < ApplicationController
     def person_params
       params.require(:person).permit(:name, :posts)
     end
+    
+    
+    def submit
+      SiteMailer.notify(params).deliver unless params[:content].present? # honeypot check
+      flash[:success] = "Your message has been submitted. Thank you!"
+      redirect_to root_url
+    end
 end
