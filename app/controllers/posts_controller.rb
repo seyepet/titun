@@ -7,6 +7,9 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @page_title = 'Index'
+    @page_description = 'Online Retails Store that offers Best Quality for the Best Price and also Give Cash Back to the Customers'
+    @page_keywords = 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research'
   end
 
   # GET /posts/1
