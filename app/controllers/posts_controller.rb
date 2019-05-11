@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:show, :index]
-  # prepend_before_action :require_no_authentication, only: :cancel
+  # before_action :authenticate_user!, except: [:show, :index]
+ 
 
   # GET /posts
   # GET /posts.json
