@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  model: MyString
+  year: 2019-05-11
+  gear_type: MyString
+  number_of_wheels: 1
+  price: 9.99
+  purchased: false
+  image_url: MyString
+  category: one
+
+two:
+  brand: MyString
+  model: MyString
+  year: 2019-05-11
+  gear_type: MyString
+  number_of_wheels: 1
+  price: 9.99
+  purchased: false
+  image_url: MyString
+  category: two

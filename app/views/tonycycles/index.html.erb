@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tonycycles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Gear type</th>
+      <th>Number of wheels</th>
+      <th>Price</th>
+      <th>Purchased</th>
+      <th>Image url</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tonycycles.each do |tonycycle| %>
+      <tr>
+        <td><%= tonycycle.brand %></td>
+        <td><%= tonycycle.model %></td>
+        <td><%= tonycycle.year %></td>
+        <td><%= tonycycle.gear_type %></td>
+        <td><%= tonycycle.number_of_wheels %></td>
+        <td><%= tonycycle.price %></td>
+        <td><%= tonycycle.purchased %></td>
+        <td><%= tonycycle.image_url %></td>
+        <td><%= tonycycle.category %></td>
+        <td><%= link_to 'Show', tonycycle %></td>
+        <td><%= link_to 'Edit', edit_tonycycle_path(tonycycle) %></td>
+        <td><%= link_to 'Destroy', tonycycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tonycycle', new_tonycycle_path %>

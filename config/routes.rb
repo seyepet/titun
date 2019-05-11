@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :solarworks
+  resources :tonycycles
+  resources :adeapartments
+  resources :dreamscomputers
+  resources :marketplaces
+  resources :categories
   resources :posts
   devise_for :users
   resources :people

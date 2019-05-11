@@ -8,6 +8,9 @@ class PeopleController < ApplicationController
     @page_title = 'Index'
     @page_description = 'Online Retails Store that offers Best Quality for the Best Price and also Give Cash Back to the Customers'
     @page_keywords = 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research'
+    @dreamscomputers = Dreamscomputer.all
+    @adeapartments = Adeapartment.all
+    @solarworks = Solarwork.all
    
   end
 

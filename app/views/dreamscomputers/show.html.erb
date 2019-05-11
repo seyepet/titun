@@ -1,0 +1,63 @@
+
+
+
+<div class="container">
+        	<div class="row">
+               <div class="col-xs-4 item-photo">
+                    <%= image_tag @dreamscomputer.image_url , :id => 'product_image', class: "img-responsive" %>
+                </div>
+                <div class="col-xs-5" style="border:0px solid gray">
+                    <!-- Datos del vendedor y titulo del producto -->
+                    <h3><%= @dreamscomputer.name %></h3>    
+                    <h5 style="color:#337ab7">vendido por <a href="#">Samsung</a> · <small style="color:#337ab7">(5054 ventas)</small></h5>
+        
+                    <!-- Precios -->
+                    <h6 class="title-price"><small>Price </small></h6>
+                    <h3 style="margin-top:0px;"><%= @dreamscomputer.price %></h3>
+                    <div>
+                        <form action="/process" method="POST" >
+  <script
+    src="https://js.paystack.co/v1/inline.js" 
+    data-key="pk_test_221221122121"
+    data-email="customer@email.com"
+    data-amount="10000"
+    data-ref=<UNIQUE TRANSACTION REFERENCE>
+  
+  </script>
+</form>
+                    </div>
+        
+                   
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Category</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @dreamscomputer.category %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div>  
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Description</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @dreamscomputer.description %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div> 
+                    
+                    <div class="section" style="padding-bottom:20px;">
+                        <!--<h6 class="title-attr"><small>CANTIDAD</small></h6>                    -->
+                        <div>
+                            <!--<div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>-->
+                            <!--<input value="1" />-->
+                            <!--<div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>-->
+                        </div>
+                    </div>                
+        
+
+
+<p id="notice"><%= notice %></p>
+
+<br>
+
+
+
+<%= link_to 'Back', dreamscomputers_path %>

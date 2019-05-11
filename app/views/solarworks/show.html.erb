@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @solarwork.name %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @solarwork.code %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @solarwork.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @solarwork.price %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @solarwork.image_url %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @solarwork.category %>
+</p>
+
+<%= link_to 'Edit', edit_solarwork_path(@solarwork) %> |
+<%= link_to 'Back', solarworks_path %>

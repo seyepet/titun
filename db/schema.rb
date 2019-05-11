@@ -10,10 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_120316) do
+ActiveRecord::Schema.define(version: 2019_05_11_134822) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adeapartments", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.decimal "price"
+    t.string "description"
+    t.string "image_url"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_adeapartments_on_category_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "dreamscomputers", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.decimal "price"
+    t.string "description"
+    t.string "image_url"
+    t.string "number"
+    t.string "vendor"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_dreamscomputers_on_category_id"
+  end
+
+  create_table "marketplaces", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price"
+    t.string "description"
+    t.string "vendor"
+    t.string "image_url"
+    t.string "number"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_marketplaces_on_category_id"
+  end
 
   create_table "people", force: :cascade do |t|
     t.string "name"
@@ -30,6 +77,33 @@ ActiveRecord::Schema.define(version: 2019_05_07_120316) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "solarworks", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.string "description"
+    t.decimal "price"
+    t.string "image_url"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_solarworks_on_category_id"
+  end
+
+  create_table "tonycycles", force: :cascade do |t|
+    t.string "brand"
+    t.string "model"
+    t.date "year"
+    t.string "gear_type"
+    t.integer "number_of_wheels"
+    t.decimal "price"
+    t.boolean "purchased"
+    t.string "image_url"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_tonycycles_on_category_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -43,5 +117,10 @@ ActiveRecord::Schema.define(version: 2019_05_07_120316) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "adeapartments", "categories"
+  add_foreign_key "dreamscomputers", "categories"
+  add_foreign_key "marketplaces", "categories"
   add_foreign_key "posts", "users"
+  add_foreign_key "solarworks", "categories"
+  add_foreign_key "tonycycles", "categories"
 end

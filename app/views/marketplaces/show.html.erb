@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @marketplace.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @marketplace.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @marketplace.description %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @marketplace.vendor %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @marketplace.image_url %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @marketplace.number %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @marketplace.category %>
+</p>
+
+<%= link_to 'Edit', edit_marketplace_path(@marketplace) %> |
+<%= link_to 'Back', marketplaces_path %>

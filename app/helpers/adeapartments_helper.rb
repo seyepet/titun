@@ -1,0 +1,2 @@
+module AdeapartmentsHelper
+end

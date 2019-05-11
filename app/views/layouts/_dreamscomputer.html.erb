@@ -1,0 +1,28 @@
+<div class="container">
+
+ <div class="card-group">
+    <div class="container">
+     <div class="card-deck">
+        <div class="album text-muted">
+          
+              <div class="row">
+                 <% @dreamscomputers.each do |dreamscomputer| %>
+                 <div class="card card mb-3 style="max-width: 8rem;">
+                   <a href="<%= dreamscomputer_path(dreamscomputer) %>"><%= link_to image_tag  dreamscomputer.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <div class="row">
+                     <div class="col">
+                     <h4><p class=" price card-header text-center"><%= dreamscomputer.name %></p></h4>
+                     <h4><p class=" price card-header text-center"><%= dreamscomputer.price %></p></h4>
+                    <!--<h5><p class="blockquote mb-0 text-center"><%= dreamscomputer.description %></p></h5>-->
+                   <p class="col"><%= link_to 'Product Details', dreamscomputer, :class=>"btn btn-primary btn-block" %></p>
+                 </div>
+               </div>
+             </div>
+            <% end %>
+          </div>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>            
+ </div> 

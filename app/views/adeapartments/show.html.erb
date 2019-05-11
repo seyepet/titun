@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adeapartment.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @adeapartment.address %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @adeapartment.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @adeapartment.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @adeapartment.image_url %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @adeapartment.category %>
+</p>
+
+<%= link_to 'Edit', edit_adeapartment_path(@adeapartment) %> |
+<%= link_to 'Back', adeapartments_path %>

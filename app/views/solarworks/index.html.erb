@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Solarworks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Image url</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solarworks.each do |solarwork| %>
+      <tr>
+        <td><%= solarwork.name %></td>
+        <td><%= solarwork.code %></td>
+        <td><%= solarwork.description %></td>
+        <td><%= solarwork.price %></td>
+        <td><%= solarwork.image_url %></td>
+        <td><%= solarwork.category %></td>
+        <td><%= link_to 'Show', solarwork %></td>
+        <td><%= link_to 'Edit', edit_solarwork_path(solarwork) %></td>
+        <td><%= link_to 'Destroy', solarwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solarwork', new_solarwork_path %>

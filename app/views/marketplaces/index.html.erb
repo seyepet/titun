@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Marketplaces</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Vendor</th>
+      <th>Image url</th>
+      <th>Number</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marketplaces.each do |marketplace| %>
+      <tr>
+        <td><%= marketplace.name %></td>
+        <td><%= marketplace.price %></td>
+        <td><%= marketplace.description %></td>
+        <td><%= marketplace.vendor %></td>
+        <td><%= marketplace.image_url %></td>
+        <td><%= marketplace.number %></td>
+        <td><%= marketplace.category %></td>
+        <td><%= link_to 'Show', marketplace %></td>
+        <td><%= link_to 'Edit', edit_marketplace_path(marketplace) %></td>
+        <td><%= link_to 'Destroy', marketplace, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marketplace', new_marketplace_path %>
