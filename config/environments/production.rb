@@ -35,7 +35,8 @@ Rails.application.configure do
   ENV_RECAPTCHA_PRIVATE_KEY = "6LdP5qIUAAAAAKgNwP4t-yfsxiBAFHYI4FB7Gd-x"
   end
   
- 
+  
+
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
