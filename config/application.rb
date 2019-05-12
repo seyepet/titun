@@ -18,4 +18,3 @@ module Titun
   end
 end
 
-config.secret_key_base = '3174cd3e1390738ce33ca8c6ce9e51e51cbd42973805cd45a3c510b00097f17f4ec05bbdcf44230bbedb2a8d30fb84144898307e07e869addcd504d03fe8e153'
