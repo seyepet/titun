@@ -1,43 +1,27 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Tonycycles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Brand</th>
-      <th>Model</th>
-      <th>Year</th>
-      <th>Gear type</th>
-      <th>Number of wheels</th>
-      <th>Price</th>
-      <th>Purchased</th>
-      <th>Image url</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tonycycles.each do |tonycycle| %>
-      <tr>
-        <td><%= tonycycle.brand %></td>
-        <td><%= tonycycle.model %></td>
-        <td><%= tonycycle.year %></td>
-        <td><%= tonycycle.gear_type %></td>
-        <td><%= tonycycle.number_of_wheels %></td>
-        <td><%= tonycycle.price %></td>
-        <td><%= tonycycle.purchased %></td>
-        <td><%= tonycycle.image_url %></td>
-        <td><%= tonycycle.category %></td>
-        <td><%= link_to 'Show', tonycycle %></td>
-        <td><%= link_to 'Edit', edit_tonycycle_path(tonycycle) %></td>
-        <td><%= link_to 'Destroy', tonycycle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tonycycle', new_tonycycle_path %>
+ <div class="card-group">
+    <div class="container">
+     <div class="card-deck">
+        <div class="album text-muted">
+          
+              <div class="row">
+                <div class="col d-flex justify-content-center">
+                 <% @tonycycles.each do |tonycycle| %>
+                 
+                 <div class="card card mb-3 style="max-width: 8rem;", class: "mx-auto d-block">
+                    <a href="<%= tonycycle_path(tonycycle) %>"><%= image_tag  tonycycle.image_url,class: "mx-auto d-block", class: "img-responsive img-thumbnail", class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <div class="row">
+                     <div class="col">
+                     <h6><p class=" price card-header text-center"><%= tonycycle.brand %></p></h6>
+                     <h6><p class=" price card-header text-center"><%= tonycycle.price %></p></h6>
+                   
+                   <h6> <p class="h6"><%= link_to 'Details', tonycycle, :class=>"btn btn-primary btn-block" %></p></h6>
+                 </div>
+               </div>
+             </div>
+            <% end %>
+          </div>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>

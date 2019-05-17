@@ -1,3 +1,39 @@
 // Place all the styles related to the marketplaces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.carousel-item {
+  height: 0vh;
+  min-height: 150px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.lnr {
+  display: inline-block;
+  fill: currentColor;
+  width: 0.5em;
+  height: 0.5em;
+  vertical-align: -0.05em;
+  stroke-width: 1;
+}
+
+.services-icon {
+  margin-bottom: 20px;
+  font-size: 90px;
+}
+bgc2, .vLine, .hLine {
+    background-color: #0F52BA;
+}
+
+.quote-icon {
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+.services-icon {
+    font-size: 90px;
+    margin-left: 2rem;
+}

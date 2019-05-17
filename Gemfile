@@ -7,6 +7,16 @@ gem 'devise'
 
 gem "recaptcha"
 
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
+gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+
+gem 'mail_form'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'meta-tags'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -35,6 +45,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
+
+gem "aws-sdk-s3", require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

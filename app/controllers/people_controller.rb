@@ -5,12 +5,16 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
-    @page_title = 'Index'
+    @page_title = 'Akobe Limited'
     @page_description = 'Online Retails Store that offers Best Quality for the Best Price and also Give Cash Back to the Customers'
     @page_keywords = 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research'
-    @dreamscomputers = Dreamscomputer.all
-    @adeapartments = Adeapartment.all
-    @solarworks = Solarwork.all
+    @dreamscomputers = Dreamscomputer.search(params[:term], params[:page])
+    @adeapartments = Adeapartment.search(params[:term], params[:page])
+    @solarworks = Solarwork.search(params[:term], params[:page])
+    @marketplaces =Marketplace.search(params[:term], params[:page])
+    @categories = Category.all
+    @tonycycles = Tonycycle.search(params[:term], params[:page])
+   
    
   end
 
@@ -66,6 +70,10 @@ class PeopleController < ApplicationController
       format.html { redirect_to people_url, notice: 'Person was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+  
+  def ronis
+  
   end
 
   private

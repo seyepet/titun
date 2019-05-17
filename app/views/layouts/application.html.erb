@@ -16,26 +16,28 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
  <script src="https://www.google.com/recaptcha/api.js"  async defer></script>
  <meta name='description'
-      content='<%= yield_meta_tag(:description, 'Default description') %>' />
+      content='<%= yield_meta_tag(:description, 'Online Retails Store that offers Best Quality for the Best Price and also Give Cash Back to the Customers') %>' />
 <meta name='keywords'
-      content='<%= yield_meta_tag(:keywords, 'defaults,ruby,rails') %>' />
- 
- 
+      content='<%= yield_meta_tag(:keywords, 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research') %>' />
 
-  </head>
+ <title>
+     <%= if content_for?(:title) then yield(:title) + ' | ' end %>
+      Akobe Limited
+     </title>
 
-  <body>
+</head>
+
+
+<body>
     
     <%= render 'layouts/header' %>
     <%= render 'layouts/noticefication' %>
     
-    <title>
-     <%= if content_for?(:title) then yield(:title) + ' | ' end %>
-      Akobe Limited
-     </title>
+   
     
     <div class='container-fluid'>
     <%= yield %>
+    <%= render "layouts/footer" %>
     </div>
   </body>
 </html>

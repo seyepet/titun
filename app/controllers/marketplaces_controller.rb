@@ -15,6 +15,7 @@ class MarketplacesController < ApplicationController
   # GET /marketplaces/new
   def new
     @marketplace = Marketplace.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /marketplaces/1/edit

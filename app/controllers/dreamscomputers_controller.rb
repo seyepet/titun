@@ -5,6 +5,11 @@ class DreamscomputersController < ApplicationController
   # GET /dreamscomputers.json
   def index
     @dreamscomputers = Dreamscomputer.all
+    @contact = Contact.all
+    @contacts = Contact.all
+    
+  
+  
   end
 
   # GET /dreamscomputers/1
@@ -15,6 +20,7 @@ class DreamscomputersController < ApplicationController
   # GET /dreamscomputers/new
   def new
     @dreamscomputer = Dreamscomputer.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /dreamscomputers/1/edit

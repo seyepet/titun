@@ -15,6 +15,7 @@ class AdeapartmentsController < ApplicationController
   # GET /adeapartments/new
   def new
     @adeapartment = Adeapartment.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /adeapartments/1/edit

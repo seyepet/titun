@@ -1,37 +1,28 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Solarworks</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Code</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image url</th>
-      <th>Category</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @solarworks.each do |solarwork| %>
-      <tr>
-        <td><%= solarwork.name %></td>
-        <td><%= solarwork.code %></td>
-        <td><%= solarwork.description %></td>
-        <td><%= solarwork.price %></td>
-        <td><%= solarwork.image_url %></td>
-        <td><%= solarwork.category %></td>
-        <td><%= link_to 'Show', solarwork %></td>
-        <td><%= link_to 'Edit', edit_solarwork_path(solarwork) %></td>
-        <td><%= link_to 'Destroy', solarwork, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Solarwork', new_solarwork_path %>
+ <div class="card-group">
+    <div class="container">
+     <div class="card-deck">
+        <div class="album text-muted">
+          
+              <div class="row">
+                 <% @solarworks.each do |solarwork| %>
+                 <div class="col-sm-3 col-md-3">
+                 <div class="card card mb-3 style="max-width: 8rem;", class: "mx-auto d-block">
+                    <a href="<%= solarwork_path(solarwork) %>"><%= image_tag  solarwork.image_url,class: "mx-auto d-block", class: "img-responsive img-thumbnail", class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <div class="row">
+                     <div class="col">
+                     <h6><p class=" price card-header text-center"><%= solarwork.name %></p></h6>
+                     <h6><p class=" price card-header text-center"><%= solarwork.code %></p</h6>
+                     <h6><p class=" price card-header text-center"><%= solarwork.price %></p></h6>
+                   
+                  <h6> <p class="h6"><%= link_to 'Details', solarwork, :class=>"btn btn-primary btn-block" %></p</h6>
+                  </div>
+                 </div>
+               </div>
+             </div>
+            <% end %>
+          </div>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>

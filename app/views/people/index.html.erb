@@ -114,6 +114,7 @@
               <%= text_field_tag :content, nil, tabindex: '-1' %>
               <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
             </div>
+            <!--<div class="g-recaptcha" data-sitekey="6LcL66IUAAAAAA_kQHU1997bGbxO1TkNATWk5jqj"></div>-->
             <div class="g-recaptcha" data-sitekey="6LcL66IUAAAAAA_kQHU1997bGbxO1TkNATWk5jqj"></div>
             <div class="actions">
               <%= f.submit "Sign up" %>
@@ -139,7 +140,7 @@
                  
                 </div></a>
               <div class="text-center">
-                <footer class="blockquote-footer">by <cite>1-Day Tailor</cite></footer>
+                <div class="blockquote">by <cite>1-Day Tailor</cite></div>
                 <p class="text-muted">Starting from 2,500</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -151,7 +152,7 @@
                 
                 </div></a>
               <div class="text-center">
-                 <footer class="blockquote-footer">by <cite>D-Computers</cite></footer>
+                 <div class="blockquote">by <cite>D-Computers</cite></div>
                 <p class="text-muted">Starting from N65,000.00</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -163,8 +164,8 @@
                  
                 </div></a>
               <div class=" text-center">
-               <footer class="blockquote-footer">by <cite>Ronis Auto Mechanic</cite></footer>
-                <p class="text-muted">Generous Rates and Charges</p> <%= link_to 'View Details', root_path, class: "" %>
+               <div class="blockquote">by <cite>Ronis Auto Mechanic</cite></div>
+                <p class="text-muted">Generous Rates and Charges</p> <%= link_to 'View Details', home_ronis_path, class: "" %>
               </div>
             </div>
           </div>
@@ -175,7 +176,7 @@
                  
                 </div></a>
               <div class=" text-center">
-                <footer class="blockquote-footer">by <cite>SolarWorks</cite></footer>
+                <div class="blockquote">by <cite>SolarWorks</cite></div>
                 <p class="text-muted">Starting from N85,000</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -188,7 +189,7 @@
                  
                 </div></a>
               <div class="text-center">
-                 <footer class="blockquote-footer">by <cite>Tony Cycles  </cite></footer>
+                 <div class="blockquote">by <cite>Tony Cycles  </cite></div>
                 <p class="text-muted">Starting from N700,000</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -200,7 +201,7 @@
                  
                 </div></a>
               <div class="text-center">
-              <footer class="blockquote-footer">by <cite>Ife Groceries</cite></footer>
+              <div class="blockquote">by <cite>Ife Groceries</cite></div>
                 <p class="text-muted">Coming Soon</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -219,7 +220,7 @@
                  
                 </div></a>
               <div class="text-center">
-                 <footer class="blockquote-footer">by <cite>Trademark Registration</cite></footer>
+                 <div class="blockquote">by <cite>Trademark Registration</cite></div>
                 <p class="text-muted"> Starting from N55,000</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -231,7 +232,7 @@
                 
                 </div></a>
               <div class="text-center">
-                <footer class="blockquote-footer">by <cite>ROFI Equipment</cite></footer>
+                <div class="blockquote">by <cite>ROFI Equipment</cite></div>
                 <p class="text-muted">Starting from N300,000</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -243,7 +244,7 @@
                  
                 </div></a>
               <div class=" text-center">
-               <footer class="blockquote-footer">by <cite>HSH Web Developers</cite></footer>
+               <div class="blockquote">by <cite>HSH Web Developers</cite></div>
                 <p class="text-muted">N30,000</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -255,7 +256,7 @@
                  
                 </div></a>
               <div class=" text-center">
-                 <footer class="blockquote-footer">by <cite>MBI Africa</cite></footer>
+                 <div class="blockquote">by <cite>MBI Africa</cite></div>
                 <p class="text-muted">Starting from N5 Million</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -268,7 +269,7 @@
                  
                 </div></a>
               <div class="text-center">
-                 <footer class="blockquote-footer">by <cite>Emeka Gloceries</cite></footer>
+                 <div class="blockquote">by <cite>Emeka Gloceries</cite></div>
                 <p class="text-muted">Coming Soon</p> <%= link_to 'View Details', root_path, class: "" %>
               </div>
             </div>
@@ -280,7 +281,7 @@
                  
                 </div></a>
               <div class="text-center">
-                 <footer class="blockquote-footer">by <cite>Xrite Phones</cite></footer>
+                 <div class="blockquote">by <cite>Xrite Phones</cite></div>
                <h6></h6> <p class="text-muted">Starting from N2,500</p> <%= link_to 'View Details', root_path, class: "" %> </h6>
               </div>
             </div>
@@ -355,8 +356,190 @@
   });
 </script>
 
+
+
 <hr>
-<div class='container-fluid'>
-<h5 class="text-center mb-30", id="introword"> D-Dreams Computers</h5>
-<%= render 'layouts/dreamscomputer' %>
+<div class='container'>
+    <div class='center'>
+    <h5 class="text-center mb-30", id="introword"> D-Dreams Computers</h5>
+    <h5 class="center"> <%= will_paginate @dreamscomputers %></h5>
+    </div>
+    <%= render 'layouts/dreamscomputer' %>
+    
 </div>
+
+<hr>
+<div class='container'>
+    <div class='center'>
+    <h5 class="text-center mb-30", id="introword"> Ade Properties</h5>
+    <%= will_paginate @adeapartments %>
+    </div>
+    <%= render 'layouts/adeapartment' %>
+</div>
+
+
+
+
+<hr>
+<div class='container'>
+    <div class='center'>
+    <h5 class="text-center mb-30", id="introword"> MArketplace Buisness Incubator Limited</h5>
+     <%= will_paginate @marketplaces %>
+    </div>
+    <%= render 'layouts/marketplace' %>
+</div>
+
+
+<hr>
+ <div class="container">
+	<!--<div class="row" style="position: absolute">-->
+	<!--	<h4>So I've worked on a new project and came up with this UI. Here you can use it. :) Follow me on twitter: <a href="https://twitter.com/AlexMahrt/">@AlexMahrt</a></h4>-->
+	<!--</div>-->
+    <hr>
+            <div class="row row-margin-bottom">
+            <div class="col-md-5 no-padding lib-item" data-category="view">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6">
+                      
+                            <img class: "img-responsive" , class: "h-50 d-inline-block", class: "w-50 p-3",  src="https://s3.us-east-2.amazonaws.com/babanla/assets/akobeproperties/1.png">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                               Apapa Property
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                               The property is located close to Apapa seaport and it is suitable for <i> housing and warehousing</i>. 
+The property has letters of administration as title and the asking price of the property is<em> <b> N60 million</b></em>.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5 no-padding lib-item" data-category="ui">
+                <div class="lib-panel">
+                    <div class="row box-shadow">
+                        <div class="col-md-6">
+                            <img class="lib-img" src="https://s3.us-east-2.amazonaws.com/babanla/assets/akobeproperties/ifofarmlandwithfishery.jpg" , class="img-responsive" , class: "h-50 d-inline-block", class: "w-50 p-3">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="lib-row lib-header">
+                                Ifo Farms
+                                <div class="lib-header-seperator"></div>
+                            </div>
+                            <div class="lib-row lib-desc">
+                               Farm land at Ifo is suitable for investment, training, research, agrotourism and agritaiment facilities. The farm land is a 14 acres with standing and fruiting pal front, pal procerssing factory, three bedroom flat and a farm office and other farm facilities
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<div class="container">
+    <h3 class="h3">shopping Demo-6 </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-1.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-2.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Women's Red Top</a></h3>
+                    <div class="price">$8.00
+                        <span>$12.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-3.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid6">
+                <div class="product-image6">
+                    <a href="#">
+                        <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-4.jpg">
+                    </a>
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                    <div class="price">$11.00
+                        <span>$14.00</span>
+                    </div>
+                </div>
+                <ul class="social">
+                    <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                    <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                    <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+<div class='container'>
+<h5 class="text-center mb-30", id="introword"> Tony Trycles</h5>
+<%= render 'layouts/tonycycles' %>
+</div>
+
+
+<div class='container'>
+    <div class='center'>
+<h5 class="text-center mb-30", id="introword"> Sola Solar Pannels</h5>
+<%= will_paginate @solarworks %>
+</div>
+<%= render 'layouts/solarwork' %>
+</div>
+

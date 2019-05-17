@@ -15,6 +15,7 @@ class TonycyclesController < ApplicationController
   # GET /tonycycles/new
   def new
     @tonycycle = Tonycycle.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /tonycycles/1/edit
@@ -25,6 +26,7 @@ class TonycyclesController < ApplicationController
   # POST /tonycycles.json
   def create
     @tonycycle = Tonycycle.new(tonycycle_params)
+    @product.category_id = params[:category_id] 
 
     respond_to do |format|
       if @tonycycle.save

@@ -15,6 +15,7 @@ class SolarworksController < ApplicationController
   # GET /solarworks/new
   def new
     @solarwork = Solarwork.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /solarworks/1/edit
