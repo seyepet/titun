@@ -43,7 +43,7 @@
                   <div class="thumblist"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/2.TVS.jpg" alt="Category"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/4.TVS.jpg" alt="Category"></div>
                 </div></a>
               <div class="text-center">
-                <%= link_to 'Vehicles', root_path, class: "" %>
+                <%= link_to 'Vehicles', tonycycles_path, class: "" %>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
                   <div class="thumblist"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/hp/HP+NoteBook+15+BS289WM.jpg" , class: "h-60 d-inline-block", alt="Category"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/hp/HP+Notebook+14CF0008CA.jpg" , class: "h-60 d-inline-block",alt="Category"></div>
                 </div></a>
               <div class="text-center">
-                <%= link_to 'Electronics', root_path, class: "" %>
+                <%= link_to 'Electronics', dreamscomputers_path, class: "" %>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@
                   <div class="thumblist"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/akobeproperties/2.png" alt="Category"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/akobeproperties/3.png" alt="Category"></div>
                 </div></a>
               <div class="text-center">
-                 <%= link_to 'Properties', root_path, class: "" %>
+                 <%= link_to 'Properties', adeapartments_path, class: "" %>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@
                   <div class="thumblist"><img src="https://s3.us-east-2.amazonaws.com/babanla/assets/data_mining.png" alt="Category"></div>
                 </div></a>
               <div class="text-center">
-                 <%= link_to 'Research', root_path, class: "" %>
+                 <%= link_to 'Research', home_index_path, class: "" %>
               </div>
             </div>
         </div>
@@ -85,15 +85,15 @@
 
     </div>
     <div class="col-4">
-          <h6 class="ml5">
-            <span class="text-wrapper">
-              <span class="line line1"></span>
-              <h6 class="letters letters-left">Sign Up</h6>
-              <span class="letters ampersand">&amp;</span>
-              <h6 class="letters letters-right">Get a N1000 Cash Bonus</h6>
-              <span class="line line2"></span>
-            </span>
-          </h6>
+          <!--<h6 class="ml5">-->
+          <!--  <span class="text-wrapper">-->
+          <!--    <span class="line line1"></span>-->
+          <!--    <h6 class="letters letters-left">Sign Up</h6>-->
+          <!--    <span class="letters ampersand">&amp;</span>-->
+          <!--    <h6 class="letters letters-right">Get a Cash Bonus</h6>-->
+          <!--    <span class="line line2"></span>-->
+          <!--  </span>-->
+          <!--</h6>-->
       <!--<h6 id="introword">Sign up and  Get a N1000 Cash Bonus</h6>-->
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= render "devise/shared/error_messages", resource: resource %>
