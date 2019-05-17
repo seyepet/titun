@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'home/ronis'
   get 'home/shop'
   get 'home/marketplacehome'
-   get 'home/news'
+  get 'home/news'
   resources :home, only: [:index, :new, :create]
   resources :contacts
   resources :solarworks
