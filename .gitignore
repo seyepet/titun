@@ -28,6 +28,8 @@
 /config/secrets.yml
 /config/secrets.config
 .env
+/storage_access_key
+/storage.yml
 
 
 # Elastic Beanstalk Files
