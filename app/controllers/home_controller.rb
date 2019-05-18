@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  def index
+    def index
     @contact = Home.new(params[:home])
-  end
+    end
 
   def create
     @contact = Home.new(params[:home])
@@ -18,6 +18,4 @@ class HomeController < ApplicationController
       end
     end
   end
-  def ronis
-  end  
 end
