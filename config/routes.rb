@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'home/shop'
   get 'home/marketplacehome'
   get 'home/ticker'
-  resources :home, only: [:index, :new, :create]
+  resources :home
   resources :contacts
   resources :solarworks
   resources :tonycycles
@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   devise_for :users
   resources :people
   root 'people#index'
-  get 'contacts/new' => 'dreamscomputers#show'
+  # get 'contacts/new' => 'dreamscomputers#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
