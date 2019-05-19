@@ -44,6 +44,14 @@ Adeapartment.create!(address: 'Ifo Farm Land', price: 7500000, description: 'Far
 
 
 Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
+Tonycycle.create!(brand: 'TVS ThreeWheeler', price: 700000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/tvs/1.TVS.jpg',  category_id: tvsthreewheeler.id)
 
 
 

@@ -6,6 +6,7 @@
           
               <div class="row">
                  <% @marketplaces.each do |marketplace| %>
+                  <div class="col-sm-3 col-md-3">
                  <div class="card card mb-3 style="max-width: 8rem;">
                    <a href="<%= marketplace_path(marketplace) %>"><%= link_to image_tag  marketplace.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
                    <div class="row">
@@ -14,6 +15,7 @@
                      <h6><p class=" price card-header text-center"><%= marketplace.price %></p></h6>
                     <!--<h5><p class="blockquote mb-0 text-center"><%= marketplace.description %></p></h5>-->
                   <h6> <p class="h6"><%= link_to 'Details', marketplace, :class=>"btn btn-primary btn-block" %></p></h6>
+                  <div>
                  </div>
                </div>
              </div>
