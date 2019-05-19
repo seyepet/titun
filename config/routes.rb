@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'home/index' 
   get 'home/ronis'
-  get 'home/shop'
+  get 'people/shop'
   get 'home/marketplacehome'
-  get 'home/ticker'
+  get 'people/ticker'
   resources :home
   resources :contacts
   resources :solarworks
