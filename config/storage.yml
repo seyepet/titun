@@ -12,7 +12,7 @@ amazon:
   access_key_id: <%= Rails.application.secrets.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.secrets.dig(:aws, :secret_access_key) %>
   region: us-east-2
-  bucket: shopuploads
+  bucket: <%= ["AWS_BUCKET"] %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
