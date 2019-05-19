@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home/index' 
   get 'home/ronis'
   get 'home/shop'
   get 'home/marketplacehome'

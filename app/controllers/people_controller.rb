@@ -14,6 +14,7 @@ class PeopleController < ApplicationController
     @marketplaces =Marketplace.search(params[:term], params[:page])
     @categories = Category.all
     @tonycycles = Tonycycle.search(params[:term], params[:page])
+    
    
    
   end

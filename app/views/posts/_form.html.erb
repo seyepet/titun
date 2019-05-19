@@ -1,10 +1,11 @@
 <div class='container'>
   <div class='row'>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       
     </div>
-    <div class='col-sm-4'>
-      <h3>Seller and Product Information</h3>
+    <div class='col-sm-8'>
+      <div class="text-center"><h1 class"text-center">Seller and Product Information</h1></div>
+      
         <%= form_with(model: post, local: true) do |form| %>
           <% if post.errors.any? %>
             <div id="error_explanation">
@@ -17,44 +18,78 @@
               </ul>
             </div>
           <% end %>
+          
+          
         
-          <div class="form-group">
-            <%= form.text_field :title,  autofocus: true, autocomplete: "Title", placeholder: 'Title', class: "form-control" %>
-          </div>
+          <!--<div class="form-group" class="col-sm-2">-->
+          <!--  <%= form.text_field :title,  autofocus: true, autocomplete: "Title", placeholder: 'Title', class: "form-control" %>-->
+          <!--</div>-->
           
+          
+          <form>
+            <form-row>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <%= form.text_field :first_name,  autofocus: true, autocomplete: "First Name", placeholder: 'First Name', class: "form-control" %>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <%= form.text_field :title,  autofocus: true, autocomplete: "Last Name", placeholder: 'Last Name', class: "form-control" %>
+                </div>
+              </div>
+            </form-row>
+          </form>
+           
+          
+          <form>
+            <form-row>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <%= form.text_field :Phone_Number,  autofocus: true, autocomplete: "Valid Phone Number", placeholder: 'Valid Phone Number', class: "form-control" %>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <%= form.text_field :Email,  autofocus: true, autocomplete: "Email", placeholder: 'Email', class: "form-control" %>
+                </div>
+              </div>
+            </form-row>
+          </form>
+           
+           
+            <form>
+            <form-row>
+              <div class="col-sm-6">
+                 <div class="form-group">
+                    <%= form.text_field :Product_Information,  autofocus: true, autocomplete: "Product Dscription", placeholder: 'Product Description', class: "form-control" %>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <%= form.text_field :Product_Price,  autofocus: true, autocomplete: "Product Price", placeholder: 'Product Price', class: "form-control" %>
+                </div>
+              </div>
+            </form-row>
+          </form>
+           
+          
+           <form>
+            <form-row>
+              <div class="col-sm-6">
+                 <div class="form-group">
+                    <%= form.text_field :Street_Address,  autofocus: true, autocomplete: "Business Address", placeholder: 'Business Address', class: "form-control" %>
+                 </div>
+              </div>
+              <div class="col-sm-6">
+                 <div class="form-group">
+                    <%= form.text_field :street_address2,  autofocus: true, autocomplete: "Street Address", placeholder: 'Street Address', class: "form-control" %>
+                  </div>
+              </div>
+            </form-row>
+          </form>
+           
            <div class="form-group">
-            <%= form.text_field :first_name,  autofocus: true, autocomplete: "First Name", placeholder: 'First Name', class: "form-control" %>
-          </div>
-          
-           <div class="form-group">
-            <%= form.text_field :title,  autofocus: true, autocomplete: "Last Name", placeholder: 'Last Name', class: "form-control" %>
-          </div>
-          
-          <div class="form-group">
-            <%= form.text_field :Phone_Number,  autofocus: true, autocomplete: "Valid Phone Number", placeholder: 'Valid Phone Number', class: "form-control" %>
-          </div>
-          
-          <div class="form-group">
-            <%= form.text_field :Email,  autofocus: true, autocomplete: "Email", placeholder: 'Email', class: "form-control" %>
-          </div>
-          
-          <div class="form-group">
-            <%= form.text_field :Product_Information,  autofocus: true, autocomplete: "Product Dscription", placeholder: 'Product Description', class: "form-control" %>
-          </div>
-          
-          <div class="form-group">
-            <%= form.text_field :Product_Price,  autofocus: true, autocomplete: "Product Price", placeholder: 'Product Price', class: "form-control" %>
-          </div>
-          
-           <div class="form-group">
-            <%= form.text_field :Street_Address,  autofocus: true, autocomplete: "Business Address", placeholder: 'Business Address', class: "form-control" %>
-          </div>
-          
-           <div class="form-group">
-            <%= form.text_field :street_address2,  autofocus: true, autocomplete: "Street Address", placeholder: 'Street Address', class: "form-control" %>
-          </div>
-          
-           <div class="field">
             <%= form.label :image %>
             <%= form.file_field :image %>
           </div>
@@ -73,7 +108,7 @@
         <% end %>
 
     </div>
-    <div class='col-sm-4'>
+    <div class='col-sm-2'>
       
     </div>
     
