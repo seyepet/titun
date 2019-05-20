@@ -11,6 +11,7 @@ propertyforsale = Category.create!(name: 'Property for Sale')
 hardskillshub = Category.create!(name: 'Hard Skills Hub')
 laptops = Category.create!(name: 'Laptop')
 tvsthreewheeler = Category.create!(name: 'TVS ThreeWheeler')
+rofimachine = Category.create!(name: ' Pepper Grinding Machine')
 inverter = Category.create!(name: 'Inverter')
 drycellbattery = Category.create!(name: 'DryCell Battery')
 gelcellbattery = Category.create!(name: 'Gell Battery')
@@ -44,10 +45,10 @@ Adeapartment.create!(address: 'Ifo Farm Land Per Acre', price: 7500000, descript
 
 
 
-Rofimachine.create!(brand: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: tvsthreewheeler.id)
-Rofimachine.create!(brand: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: tvsthreewheeler.id)
-Rofimachine.create!(brand: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: tvsthreewheeler.id)
-Rofimachine.create!(brand: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: tvsthreewheeler.id)
+Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: rofimachine.id)
+Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: rofimachine.id)
+Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: rofimachine.id)
+Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: rofimachine.id)
 
 
 
