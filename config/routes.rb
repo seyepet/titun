@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :rofimachines
   get 'home/index' 
   get 'home/ronis'
   get 'people/shop'

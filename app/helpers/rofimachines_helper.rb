@@ -1,0 +1,2 @@
+module RofimachinesHelper
+end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_014524) do
+ActiveRecord::Schema.define(version: 2019_05_20_140254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -117,6 +117,18 @@ ActiveRecord::Schema.define(version: 2019_05_16_014524) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "rofimachines", force: :cascade do |t|
+    t.string "name"
+    t.string "code"
+    t.string "description"
+    t.decimal "price"
+    t.string "image_url"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_rofimachines_on_category_id"
+  end
+
   create_table "solarworks", force: :cascade do |t|
     t.string "name"
     t.string "code"
@@ -162,6 +174,7 @@ ActiveRecord::Schema.define(version: 2019_05_16_014524) do
   add_foreign_key "dreamscomputers", "categories"
   add_foreign_key "marketplaces", "categories"
   add_foreign_key "posts", "users"
+  add_foreign_key "rofimachines", "categories"
   add_foreign_key "solarworks", "categories"
   add_foreign_key "tonycycles", "categories"
 end
