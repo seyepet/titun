@@ -1,101 +1,42 @@
-<div class="container" style="padding-top: 30px">
-<div class="card">
-  <div class="card-left">
-    <a href="#">
-      <img class="media-object" src="https://s3.us-east-2.amazonaws.com/babanla/assets/research/marketrresearch.jpg" alt="..." class="img-responsive">
-    </a>
-  </div>
-  <div class="card-body">
-    <h4 class="card-heading"><strong>Marketplace Research</strong></h4>
-    
-    <p> We combine various survey methods to generate marketing metrics to answer our clients’ questions in prospecting new or existing markets, and also provide entry strategies.
- And our mixed mode survey is also valuable for customers and products analysis and forecasting to predict future customer tastes or consumer demand. And also do brand planning, channel development, and strategic planning.We take 360 degree view of customer to improve customer experience. Also we devise strategies to engage and re-engage targeted customers.
-    </p>
-   <p><h5>Our deliverables in analytics include <h5></p>
-<ul>
-  <li>customers acquisition</li>
-  <li>customers retention</li>
-  <li>up-sell and cross-sell customers</li>
-</ul>
 <div class="container">
-  <a href="contact.html" class="btn btn-danger" role="button">Contact Us</a>
-</div>
-
-
-</p><hr> </p> 
-  </div>
-<div class="card">
-  <div class="card-left">
-    <a href="#">
-      <img class="media-object" src="https://s3.us-east-2.amazonaws.com/babanla/assets/research/marketrresearch1.jpg" alt="..." class="img-responsive">
-    </a>
-  </div>
-  <div class="card-body">
-    <h4 class="card-heading"><strong>Consumer Research</strong></h4>
-    
-    <p> Outstanding managers are interested in insights about their products, customers, and competitors. Also managers want to know the impact political, social and economic trends.
- More so, managers are interested in knowing the likelihood of an outcome of a particular campaign, project or decision. That is why we cut through complex data to support our clients with actionable insights in decision making.
- </p>
-  
-<div class="container">
-  <a href="contact.html" class="btn btn-danger" role="button">Contact Us</a>
-</div>
-
-
-</p><hr> </p> 
-  </div>
-<div class="card">
-  <div class="card-left">
-    <a href="#">
-      <img class="card-object" src="https://s3.us-east-2.amazonaws.com/babanla/assets/research/marketdataanalytics.jpg" alt="..." class="img-responsive">
-    </a>
-  </div>
-  <div class="card-body">
-    <h4 class="card-heading"><strong>Data Analytics</strong></h4>
-    
-    <p> In order to support our clients we engage in data extraction, data cleaning, data manipulation and implementation.
-    </p>
-   <p<h5>Our clients have benefited in knowing what marketing contact or ad campaign will customers will be positively persuaded and which communication will produce greater ROI. Through our analyses and expert recommendation. We assist our clients grow revenue per customer. <h5></p>
-
-<div class="container">
-  <a href="contact.html" class="btn btn-danger" role="button">Contact Us</a>
-</div>
-
-
-</p><hr> </p> 
-  </div>
-<div class="card">
-  <div class="card-left">
-    <a href="#">
-      <img class="card-object" src="https://s3.us-east-2.amazonaws.com/babanla/assets/research/datamining.jpg" alt="..." class="img-responsive">
-    </a>
-  </div>
-  <div class="card-body">
-    <h4 class="card-heading"><strong>Data Mining</strong></h4>
-    
-    <p> For instance we draw insights from small and large data in telecommunication, manufacturing retail and banking to predict individual customer behaviour and individual customer, consumer and shopper to gain valuable insights for our clients.</p>
-    <p> Also, we focus on value-added initiatives to ensure consistent decision making and increase profitability and also making sense of complex data to support business and marketing strategies to maximise customer acquisition, churn management through advanced analytics and technology.
- We also do brand planning, channel development, revenue management, strategic planning and product development
-</p>
-   
-<div class="container">
-  <a href="contact.html" class="btn btn-danger" role="button">Contact Us</a>
-</div>
-
-
-</p><hr> 
-
-
-
-</div>     
- <div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <p class="navbar-text pull-left">© 2017 Marketplace Business Incubator Africa Ltd, All Rights Reserved.
-      Terms of service | Privacy guidelines
-        
-      </p>
-
+  <div class="row">
+    <div class="col-sm-2">
       
-
     </div>
-</div>  
+    <div class="col-sm-8">
+      
+      <%= form_for @contact, url:  {action: "create"}, html: {class: "contact_form"},  remote: true do |f| %>
+      
+     <div class="form-group">
+       
+        <%= f.text_field  :name, required: true, class: "contact-form-text-area", class: "form-control",  placeholder: "Name" %>
+     </div>    
+    <div class="form-group">
+     
+        <%= f.text_field :email, required: true, class: "contact-form-text-area", class: "form-control",  placeholder: "email" %>
+    </div>
+    <div class="form-group">    
+     
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
+                        placeholder: "Send me a message", class: "form-control" %>
+    </div>                  
+
+      <div class= "hidden">
+       
+        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
+      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  <div class="col-md-6" id="flash-message">
+    <%= render 'flash' %>
+  </div>
+    </div>
+    <div class="col-sm-2">
+      
+    </div>
+  </div>
+</div>
+
+
