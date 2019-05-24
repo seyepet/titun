@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :mastercares
+  resources :schools
   get 'home/index'
   resources :rofimachines
  

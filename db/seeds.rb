@@ -17,6 +17,9 @@ drycellbattery = Category.create!(name: 'DryCell Battery')
 gelcellbattery = Category.create!(name: 'Gell Battery')
 wetcellbattery = Category.create!(name: 'Wet Battery')
 batteryrack = Category.create!(name: 'Battery Rack')
+primaryschool = Category.create!(name: 'Primary School')
+
+
 				
 Marketplace.create!(name: 'Trademark Registration', price: 50000, description: 'Trademark Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/trademark_registration.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
 Marketplace.create!(name: 'Company Incorporation', price: 50000, description: 'Company Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/company_incorporation.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
@@ -92,4 +95,10 @@ Solarwork.create!(name: 'Luminous 10KVA/180V', code: 'WIL10007', description: '1
 Solarwork.create!(name: 'Luminous 15KVA/240V offline', code: 'WIL10004', description: '15KVA/240V offline', price: 900000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ecoimages/luminous-15kva-360v-sine-wave-inverter.jpg',  category_id: inverter.id)
 Solarwork.create!(name: 'Luminous 20KVA/360V offline', code: 'WIL10012', description: 'Luminous 20KVA/360V offline', price: 975000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ecoimages/luminous-20kva-360v-sine-wave-inverter.jpg',  category_id: inverter.id)
 Solarwork.create!(name: 'Luminous 30KVA/360V offline', code: 'WIL27262', description: '30KVA/360V offline', price: 2500000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ecoimages/luminous-20kva-360v-sine-wave-inverter.jpg',  category_id: inverter.id)
+
+Mastercare.create!(name: 'Pre School', description: 'school', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: primaryschool.id)
+Mastercare.create!(name: 'Reception', description: 'school', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: primaryschool.id)
+Mastercare.create!(name: 'Kindergarden', description: 'school', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: primaryschool.id)
+Mastercare.create!(name: 'Primary 1-3', description: 'school', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: primaryschool.id)
+Mastercare.create!(name: 'Primary 3-6', description: 'school', price: 270000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg',  category_id: primaryschool.id)
 
