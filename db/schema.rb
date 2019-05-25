@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_24_101750) do
+ActiveRecord::Schema.define(version: 2019_05_25_193811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -92,6 +92,18 @@ ActiveRecord::Schema.define(version: 2019_05_24_101750) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_marketplaces_on_category_id"
+  end
+
+  create_table "mastercares", force: :cascade do |t|
+    t.string "name"
+    t.string "courses"
+    t.float "price"
+    t.string "description"
+    t.string "image_url"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_mastercares_on_category_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -185,6 +197,7 @@ ActiveRecord::Schema.define(version: 2019_05_24_101750) do
   add_foreign_key "adeapartments", "categories"
   add_foreign_key "dreamscomputers", "categories"
   add_foreign_key "marketplaces", "categories"
+  add_foreign_key "mastercares", "categories"
   add_foreign_key "posts", "users"
   add_foreign_key "rofimachines", "categories"
   add_foreign_key "schools", "categories"

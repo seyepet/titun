@@ -1,0 +1,2 @@
+module MastercaresHelper
+end
