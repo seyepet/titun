@@ -7,7 +7,7 @@
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
                     <h3><%= @mastercare.name %></h3>    
-                    <h5 style="color:#337ab7">Marketplace Place Business Incubator Ltd <a href="#">Lagos</a> · <small style="color:#337ab7">(Primary School)</small></h5>
+                    <h5 style="color:#337ab7"> The Master Care Schools Santos Layout Akowonjo <a href="#">Lagos</a> · <small style="color:#337ab7">(Creche, Nursery and Primary School)</small></h5>
         
                     <!-- Precios -->
                     <h6 class="title-price"><small>Price </small></h6>
@@ -96,39 +96,3 @@
 
 
 
-
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @mastercare.name %>
-</p>
-
-<p>
-  <strong>Courses:</strong>
-  <%= @mastercare.courses %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @mastercare.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @mastercare.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @mastercare.image_url %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @mastercare.category %>
-</p>
-
-<%= link_to 'Edit', edit_mastercare_path(@mastercare) %> |
-<%= link_to 'Back', mastercares_path %>
