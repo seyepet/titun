@@ -2,16 +2,16 @@
 <div class="container">
         	<div class="row">
                <div class="col-xs-4 item-photo">
-                    <%= image_tag @mastercare.image_url , :id => 'product_image', class: "img-responsive" %>
+                    <%= image_tag @themastercare.image_url , :id => 'product_image', class: "img-responsive" %>
                 </div>
                 <div class="col-xs-5" style="border:0px solid gray">
                     <!-- Datos del vendedor y titulo del producto -->
-                    <h3><%= @mastercare.name %></h3>    
+                    <h3><%= @themastercare.name %></h3>    
                     <h5 style="color:#337ab7"> The Master Care Schools Santos Layout Akowonjo <a href="#">Lagos</a> • <small style="color:#337ab7">(Creche, Nursery and Primary School)</small></h5>
         
                     <!-- Precios -->
                     <h6 class="title-price"><small>Price </small></h6>
-                    <h3 style="margin-top:0px;"><%= @mastercare.price %></h3>
+                    <h3 style="margin-top:0px;"><%= @themastercare.price %></h3>
                     <h3>  Pay Now or Contact Seller</h3>
                     <div>
                         <form action="/process" method="POST" >
@@ -31,7 +31,7 @@
                     <div class="section" style="padding-bottom:5px;">
                         <h6 class="title-attr"><small>Category</small></h6>                    
                         <div>
-                            <div class="attr2"><%= @mastercare.category %></div>
+                            <div class="attr2"><%= @themastercare.category %></div>
                             <div class="attr2"></div>
                         </div>
                     </div>   

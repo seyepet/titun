@@ -1,10 +1,10 @@
-<%= form_with(model: mastercare, local: true) do |form| %>
-  <% if mastercare.errors.any? %>
+<%= form_with(model: themastercare, local: true) do |form| %>
+  <% if themastercare.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(mastercare.errors.count, "error") %> prohibited this mastercare from being saved:</h2>
+      <h2><%= pluralize(themastercare.errors.count, "error") %> prohibited this themastercare from being saved:</h2>
 
       <ul>
-      <% mastercare.errors.full_messages.each do |message| %>
+      <% themastercare.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>

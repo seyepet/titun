@@ -1,6 +1,6 @@
-class CreateMastercares < ActiveRecord::Migration[5.2]
+class CreateThemastercares < ActiveRecord::Migration[5.2]
   def change
-    create_table :mastercares do |t|
+    create_table :themastercares do |t|
       t.string :name
       t.string :courses
       t.float :price

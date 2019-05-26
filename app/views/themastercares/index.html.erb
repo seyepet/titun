@@ -271,16 +271,16 @@
           
               <div class="row">
                   
-                 <% @mastercares.each do |mastercare| %>
+                 <% @themastercares.each do |themastercare| %>
                  <div class="col-sm-4 col-md-4">
                  <div class="card card mb-3 style="max-width: 8rem;">
-                   <a href="<%= mastercare_path(mastercare) %>"><%= link_to image_tag  mastercare.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <a href="<%= themastercare_path(themastercare) %>"><%= link_to image_tag  themastercare.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
                    <div class="row">
                      <div class="col">
-                     <h6><p class=" price card-header text-center"><%= mastercare.name %></p><h6>
-                     <h6><p class=" price card-header text-center"><%= mastercare.price %></p></h6>
-                    <h5><p class="blockquote mb-0 text-center"><%= mastercare.description %></p></h5>
-                  <h6> <p class="h6"><%= link_to 'Details', mastercare, :class=>"btn btn-primary btn-block" %></p></h6>
+                     <h6><p class=" price card-header text-center"><%= themastercare.name %></p><h6>
+                     <h6><p class=" price card-header text-center"><%= themastercare.price %></p></h6>
+                    <h5><p class="blockquote mb-0 text-center"><%= themastercare.description %></p></h5>
+                  <h6> <p class="h6"><%= link_to 'Details', themastercare, :class=>"btn btn-primary btn-block" %></p></h6>
                   </div>
                  </div>
                </div>

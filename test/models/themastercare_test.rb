@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MastercareTest < ActiveSupport::TestCase
+class ThemastercareTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
