@@ -17,7 +17,7 @@ drycellbattery = Category.create!(name: 'DryCell Battery')
 gelcellbattery = Category.create!(name: 'Gell Battery')
 wetcellbattery = Category.create!(name: 'Wet Battery')
 batteryrack = Category.create!(name: 'Battery Rack')
-primaryschool = Category.create!(name: 'Primary School')
+# primaryschool = Category.create!(name: 'Primary School')
 
 
 				
@@ -96,9 +96,9 @@ Solarwork.create!(name: 'Luminous 15KVA/240V offline', code: 'WIL10004', descrip
 Solarwork.create!(name: 'Luminous 20KVA/360V offline', code: 'WIL10012', description: 'Luminous 20KVA/360V offline', price: 975000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ecoimages/luminous-20kva-360v-sine-wave-inverter.jpg',  category_id: inverter.id)
 Solarwork.create!(name: 'Luminous 30KVA/360V offline', code: 'WIL27262', description: '30KVA/360V offline', price: 2500000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ecoimages/luminous-20kva-360v-sine-wave-inverter.jpg',  category_id: inverter.id)
 
-Mastercare.create!(name: 'Pre School', description: '1st Term Tuition', price: 25000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare4.png',  category_id: primaryschool.id)
-Mastercare.create!(name: 'Reception', description: '1st Term Tuition', price: 250000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare2.png',  category_id: primaryschool.id)
-Mastercare.create!(name: 'Kindergarden', description: '1st Term Tuition', price: 250000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare5.png',  category_id: primaryschool.id)
-Mastercare.create!(name: 'Nursery', description: '1st Term Tuition', price: 300000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare7.png',  category_id: primaryschool.id)
-Mastercare.create!(name: 'Primary 1-3', description: '1st Term Tuition', price: 350000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/top',  category_id: primaryschool.id)
-Mastercare.create!(name: 'Primary 4-6', description: '1st Term Tuition', price: 350000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/top',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Pre School', description: '1st Term Tuition', price: 25000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare4.png',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Reception', description: '1st Term Tuition', price: 250000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare2.png',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Kindergarden', description: '1st Term Tuition', price: 250000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare5.png',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Nursery', description: '1st Term Tuition', price: 300000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/mastercare7.png',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Primary 1-3', description: '1st Term Tuition', price: 350000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/top',  category_id: primaryschool.id)
+# Mastercare.create!(name: 'Primary 4-6', description: '1st Term Tuition', price: 350000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/mastercarephotos/top',  category_id: primaryschool.id)
