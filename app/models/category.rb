@@ -5,7 +5,11 @@ class Category < ApplicationRecord
     has_many :marketplaces
     has_many :tonycycles
     has_many :people
-    
-    
+    has_many :retrofits
+    has_many :rofimachines
+    has_many :hprrlaptops
+    has_many :hprrlaptop
+    has_many :hprlaptops
+    has_many :hprlaptop
    
 end

@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  resources :intelxphones
+  resources :infinixphones
+  resources :technophones
+  resources :retrofits
+  resources :hprrlaptops
+  resources :hprlaptops
+  resources :factoryrecertifiedacerlaptops
+  resources :factoryrecertifieddelllaptops
   resources :themastercares
   resources :schools
   get 'home/index'
+  get 'home/add'
   resources :rofimachines
  
   get 'home/ronis'

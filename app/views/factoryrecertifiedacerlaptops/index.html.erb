@@ -1,0 +1,83 @@
+<div class="card-group">
+    <div class="container">
+     <div class="card-deck">
+        <div class="album text-muted">
+          
+              <div class="row">
+                  <% @factoryrecertifiedacerlaptops.each do |factoryrecertifiedacerlaptop| %>
+                
+                 <div class="card card mb-3 style="max-width: 8rem;">
+                   <a href="<%= factoryrecertifiedacerlaptop_path(factoryrecertifiedacerlaptop) %>"><%= link_to image_tag  factoryrecertifiedacerlaptop.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <div class="row">
+                     <div class="col">
+                     <h6><p class=" price card-header text-center"><%= factoryrecertifiedacerlaptop.name  %></p></h6>
+                     <h6><p class=" price card-header text-center"><%= factoryrecertifiedacerlaptop.price %></p></h6>
+                  
+                   <h6><p class="h6"><%= link_to 'Details', factoryrecertifiedacerlaptop, :class=>"btn btn-primary btn-block" %></h6>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            <% end %>
+          </div>
+      
+     </div>
+    </div>
+   </div>
+  </div>            
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<h1>Factoryrecertifiedacerlaptops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Number</th>
+      <th>Vendor</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @factoryrecertifiedacerlaptops.each do |factoryrecertifiedacerlaptop| %>
+      <tr>
+        <td><%= factoryrecertifiedacerlaptop.name %></td>
+        <td><%= factoryrecertifiedacerlaptop.model %></td>
+        <td><%= factoryrecertifiedacerlaptop.colour %></td>
+        <td><%= factoryrecertifiedacerlaptop.price %></td>
+        <td><%= factoryrecertifiedacerlaptop.description %></td>
+        <td><%= factoryrecertifiedacerlaptop.image_url %></td>
+        <td><%= factoryrecertifiedacerlaptop.number %></td>
+        <td><%= factoryrecertifiedacerlaptop.vendor %></td>
+        <td><%= factoryrecertifiedacerlaptop.category %></td>
+        <td><%= link_to 'Show', factoryrecertifiedacerlaptop %></td>
+        <td><%= link_to 'Edit', edit_factoryrecertifiedacerlaptop_path(factoryrecertifiedacerlaptop) %></td>
+        <td><%= link_to 'Destroy', factoryrecertifiedacerlaptop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Factoryrecertifiedacerlaptop', new_factoryrecertifiedacerlaptop_path %>

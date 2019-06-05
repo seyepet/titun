@@ -1,0 +1,2 @@
+module IntelxphonesHelper
+end

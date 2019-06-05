@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Technophones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Number</th>
+      <th>Vendor</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @technophones.each do |technophone| %>
+      <tr>
+        <td><%= technophone.name %></td>
+        <td><%= technophone.model %></td>
+        <td><%= technophone.colour %></td>
+        <td><%= technophone.price %></td>
+        <td><%= technophone.description %></td>
+        <td><%= technophone.image_url %></td>
+        <td><%= technophone.number %></td>
+        <td><%= technophone.vendor %></td>
+        <td><%= technophone.category %></td>
+        <td><%= link_to 'Show', technophone %></td>
+        <td><%= link_to 'Edit', edit_technophone_path(technophone) %></td>
+        <td><%= link_to 'Destroy', technophone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Technophone', new_technophone_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @technophone.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @technophone.model %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @technophone.colour %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @technophone.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @technophone.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @technophone.image_url %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @technophone.number %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @technophone.vendor %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @technophone.category %>
+</p>
+
+<%= link_to 'Edit', edit_technophone_path(@technophone) %> |
+<%= link_to 'Back', technophones_path %>

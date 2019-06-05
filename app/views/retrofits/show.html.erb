@@ -1,0 +1,120 @@
+
+
+
+<div class="container">
+        	<div class="row">
+               <div class="col-6 col-sm-6 col-md-6">
+                    <%= image_tag @retrofit.image_url , :id => 'product_image', class: "img-responsive" %>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6" style="border:0px solid gray">
+                    <div class='container'>
+                        <div class='column'>
+                            <div class='col-'>
+                               <!-- Datos del vendedor y titulo del producto -->
+                    <h3><%= @retrofit.name %></h3>    
+                    <h5 style="color:#337ab7">D-Dreams <a href="#">Computers</a> · <small style="color:#337ab7">(Computer Village Lagos)</small></h5>
+        
+                    <!-- Precios -->
+                    <h6 class="title-price"><small>Price </small></h6>
+                    <h3 style="margin-top:0px;"><%= @retrofit.price %></h3>
+                    <h3>  Pay Now or Contact Seller</h3>
+                    <div>
+                        <form action="/process" method="POST" >
+                          <script
+                            src="https://js.paystack.co/v1/inline.js" 
+                            data-key="pk_test_221221122121"
+                            data-email="customer@email.com"
+                            data-amount="10000"
+                            data-ref=<UNIQUE TRANSACTION REFERENCE>
+                          
+                          </script>
+                        </form>
+                    </div>
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Category</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @retrofit.category %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div>  
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Description</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @retrofit.description %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div> 
+                    
+                    <div class="section" style="padding-bottom:20px;">
+                        <!--<h6 class="title-attr"><small>CANTIDAD</small></h6>                    -->
+                        <div>
+                           
+                        </div>
+                    </div>    
+                            </div>
+                            <div style="padding-bottom:50px;"  style="margin-top:50px;" >
+                               
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                   
+                   </div>
+              <hr>
+              
+
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @retrofit.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @retrofit.model %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @retrofit.colour %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @retrofit.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @retrofit.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @retrofit.image_url %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @retrofit.number %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @retrofit.vendor %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @retrofit.category %>
+</p>
+
+<%= link_to 'Edit', edit_retrofit_path(@retrofit) %> |
+<%= link_to 'Back', retrofits_path %>

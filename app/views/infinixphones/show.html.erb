@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @infinixphone.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @infinixphone.model %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @infinixphone.colour %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @infinixphone.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @infinixphone.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @infinixphone.image_url %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @infinixphone.number %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @infinixphone.vendor %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @infinixphone.category %>
+</p>
+
+<%= link_to 'Edit', edit_infinixphone_path(@infinixphone) %> |
+<%= link_to 'Back', infinixphones_path %>

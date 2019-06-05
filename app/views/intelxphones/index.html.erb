@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Intelxphones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Number</th>
+      <th>Vendor</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intelxphones.each do |intelxphone| %>
+      <tr>
+        <td><%= intelxphone.name %></td>
+        <td><%= intelxphone.model %></td>
+        <td><%= intelxphone.colour %></td>
+        <td><%= intelxphone.price %></td>
+        <td><%= intelxphone.description %></td>
+        <td><%= intelxphone.image_url %></td>
+        <td><%= intelxphone.number %></td>
+        <td><%= intelxphone.vendor %></td>
+        <td><%= intelxphone.category %></td>
+        <td><%= link_to 'Show', intelxphone %></td>
+        <td><%= link_to 'Edit', edit_intelxphone_path(intelxphone) %></td>
+        <td><%= link_to 'Destroy', intelxphone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intelxphone', new_intelxphone_path %>

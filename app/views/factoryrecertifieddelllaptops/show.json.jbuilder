@@ -1,0 +1,1 @@
+json.partial! "factoryrecertifieddelllaptops/factoryrecertifieddelllaptop", factoryrecertifieddelllaptop: @factoryrecertifieddelllaptop
