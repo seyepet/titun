@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Itelphones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Model</th>
+      <th>Colour</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th>Number</th>
+      <th>Vendor</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itelphones.each do |itelphone| %>
+      <tr>
+        <td><%= itelphone.name %></td>
+        <td><%= itelphone.model %></td>
+        <td><%= itelphone.colour %></td>
+        <td><%= itelphone.price %></td>
+        <td><%= itelphone.description %></td>
+        <td><%= itelphone.image_url %></td>
+        <td><%= itelphone.number %></td>
+        <td><%= itelphone.vendor %></td>
+        <td><%= itelphone.category %></td>
+        <td><%= link_to 'Show', itelphone %></td>
+        <td><%= link_to 'Edit', edit_itelphone_path(itelphone) %></td>
+        <td><%= link_to 'Destroy', itelphone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Itelphone', new_itelphone_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :itelphones
   resources :intelxphones
   resources :infinixphones
   resources :technophones

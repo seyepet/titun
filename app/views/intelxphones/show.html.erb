@@ -1,49 +1,67 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @intelxphone.name %>
-</p>
 
-<p>
-  <strong>Model:</strong>
-  <%= @intelxphone.model %>
-</p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @intelxphone.colour %>
-</p>
+<div class="container">
+        	<div class="row">
+               <div class="col-6 col-sm-6 col-md-6">
+                    <%= image_tag @infinixphone.image_url , :id => 'product_image', class: "img-responsive" %>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6" style="border:0px solid gray">
+                    <div class='container'>
+                        <div class='column'>
+                            <div class='col-'>
+                               <!-- Datos del vendedor y titulo del producto -->
+                    <h3><%= @intelxphone.name %></h3>    
+                    <h5 style="color:#337ab7">D-Dreams <a href="#">Phones</a> · <small style="color:#337ab7">(Computer Village Lagos)</small></h5>
+        
+                    <!-- Precios -->
+                    <h6 class="title-price"><small>Price </small></h6>
+                    <h3 style="margin-top:0px;"><%= @intelxphone.price %></h3>
+                    <h3>  Pay Now or Contact Seller</h3>
+                    <div>
+                        <form action="/process" method="POST" >
+                          <script
+                            src="https://js.paystack.co/v1/inline.js" 
+                            data-key="pk_test_221221122121"
+                            data-email="customer@email.com"
+                            data-amount="10000"
+                            data-ref=<UNIQUE TRANSACTION REFERENCE>
+                          
+                          </script>
+                        </form>
+                    </div>
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Category</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @intelxphone.category %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div>  
+                    <div class="section" style="padding-bottom:5px;">
+                        <h6 class="title-attr"><small>Description</small></h6>                    
+                        <div>
+                            <div class="attr2"><%= @intelxphone.description %></div>
+                            <div class="attr2"></div>
+                        </div>
+                    </div> 
+                    
+                    <div class="section" style="padding-bottom:20px;">
+                        <!--<h6 class="title-attr"><small>CANTIDAD</small></h6>  -->
+                        <div>
+                           
+                        </div>
+                    </div>    
+                            </div>
+                            <div style="padding-bottom:50px;"  style="margin-top:50px;" >
+                               
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                   
+                   </div>
+              <hr>
+              
 
-<p>
-  <strong>Price:</strong>
-  <%= @intelxphone.price %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @intelxphone.description %>
-</p>
-
-<p>
-  <strong>Image url:</strong>
-  <%= @intelxphone.image_url %>
-</p>
-
-<p>
-  <strong>Number:</strong>
-  <%= @intelxphone.number %>
-</p>
-
-<p>
-  <strong>Vendor:</strong>
-  <%= @intelxphone.vendor %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @intelxphone.category %>
-</p>
-
-<%= link_to 'Edit', edit_intelxphone_path(@intelxphone) %> |
-<%= link_to 'Back', intelxphones_path %>

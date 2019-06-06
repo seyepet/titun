@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @itelphone.name %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @itelphone.model %>
+</p>
+
+<p>
+  <strong>Colour:</strong>
+  <%= @itelphone.colour %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @itelphone.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @itelphone.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @itelphone.image_url %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @itelphone.number %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @itelphone.vendor %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @itelphone.category %>
+</p>
+
+<%= link_to 'Edit', edit_itelphone_path(@itelphone) %> |
+<%= link_to 'Back', itelphones_path %>
