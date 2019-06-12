@@ -13,5 +13,6 @@ class Category < ApplicationRecord
     has_many :hprlaptop
     has_many :intelxphones
     has_many :itelphones
+    has_many :newhplaptops
    
 end

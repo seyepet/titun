@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_06_002840) do
+ActiveRecord::Schema.define(version: 2019_06_12_013852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,21 @@ ActiveRecord::Schema.define(version: 2019_06_06_002840) do
     t.index ["category_id"], name: "index_marketplaces_on_category_id"
   end
 
+  create_table "newhplaptops", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "colour"
+    t.decimal "price"
+    t.string "description"
+    t.string "image_url"
+    t.string "number"
+    t.string "vendor"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_newhplaptops_on_category_id"
+  end
+
   create_table "people", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -339,6 +354,7 @@ ActiveRecord::Schema.define(version: 2019_06_06_002840) do
   add_foreign_key "intelxphones", "categories"
   add_foreign_key "itelphones", "categories"
   add_foreign_key "marketplaces", "categories"
+  add_foreign_key "newhplaptops", "categories"
   add_foreign_key "posts", "users"
   add_foreign_key "retrofits", "categories"
   add_foreign_key "rofimachines", "categories"
