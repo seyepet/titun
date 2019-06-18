@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :bags
+  resources :dslrcameras
   resources :newhplaptops
   resources :itelphones
   resources :intelxphones

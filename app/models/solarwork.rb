@@ -1,5 +1,6 @@
 class Solarwork < ApplicationRecord
   belongs_to :category
+   
   
   def self.search(term, page)
   if term

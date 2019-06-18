@@ -1,0 +1,30 @@
+
+
+ <div class="card-group">
+    <div class="container">
+     <div class="card-deck">
+        <div class="album text-muted">
+          
+              <div class="row">
+                 <% @bags.each do |bag| %>
+                 <div class="col-sm-3 col-md-3">
+                 <div class="card card mb-3 style="max-width: 8rem;">
+                   <a href="<%= bag_path(bag) %>"><%= link_to image_tag  bag.image_url, class: "img-responsive img-thumbnail",  class: "h-75 d-inline-block", class: "w-75 p-3" %></a>
+                   <div class="row">
+                     <div class="col">
+                     <h6><p class=" price card-header text-center"><%= bag.name %></p></h6>
+                     <h6><p class=" price card-header text-center"><%= bag.price %></p></h6>
+                  
+                   <h6><p class="h6"><%= link_to 'Details', bag, :class=>"btn btn-primary btn-block" %></h6>
+                   </div>
+                 </div>
+               </div>
+             </div>
+            <% end %>
+          </div>
+       </div>
+     </div>
+    </div>
+   </div>
+  </div>            
+ 

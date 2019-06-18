@@ -19,6 +19,11 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'meta-tags'
 
+# gem 'elasticsearch', '>= 1.0.15'
+# gem 'searchkick'
+# gem 'faraday_middleware-aws-signers-v4'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
@@ -47,6 +52,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 
 gem "aws-sdk-s3", require: false
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

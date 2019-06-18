@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_013852) do
+ActiveRecord::Schema.define(version: 2019_06_17_231057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,24 @@ ActiveRecord::Schema.define(version: 2019_06_12_013852) do
     t.index ["category_id"], name: "index_adeapartments_on_category_id"
   end
 
+  create_table "bags", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "colour"
+    t.string "size"
+    t.string "about"
+    t.string "material"
+    t.decimal "price"
+    t.string "description"
+    t.string "image_url"
+    t.string "number"
+    t.string "vendor"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_bags_on_category_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -79,6 +97,22 @@ ActiveRecord::Schema.define(version: 2019_06_12_013852) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_dreamscomputers_on_category_id"
+  end
+
+  create_table "dslrcameras", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "code"
+    t.string "colour"
+    t.decimal "price"
+    t.string "description"
+    t.string "image_url"
+    t.string "number"
+    t.string "vendor"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_dslrcameras_on_category_id"
   end
 
   create_table "factoryrecertifiedacerlaptops", force: :cascade do |t|
@@ -345,7 +379,9 @@ ActiveRecord::Schema.define(version: 2019_06_12_013852) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "adeapartments", "categories"
+  add_foreign_key "bags", "categories"
   add_foreign_key "dreamscomputers", "categories"
+  add_foreign_key "dslrcameras", "categories"
   add_foreign_key "factoryrecertifiedacerlaptops", "categories"
   add_foreign_key "factoryrecertifieddelllaptops", "categories"
   add_foreign_key "hprlaptops", "categories"
