@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  user: MyString
+  capacity: MyString
+  about: MyString
+  noofdevice: MyString
+  price: 9.99
+  description: MyString
+  image_url: MyString
+  number: MyString
+  vendor: MyString
+  category: one
+
+two:
+  name: MyString
+  type: 
+  user: MyString
+  capacity: MyString
+  about: MyString
+  noofdevice: MyString
+  price: 9.99
+  description: MyString
+  image_url: MyString
+  number: MyString
+  vendor: MyString
+  category: two

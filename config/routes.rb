@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :internetsecurities
   resources :bags
   resources :dslrcameras
   resources :newhplaptops
