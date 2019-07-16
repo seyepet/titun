@@ -22,6 +22,8 @@ gem 'meta-tags'
 # gem 'elasticsearch', '>= 1.0.15'
 # gem 'searchkick'
 # gem 'faraday_middleware-aws-signers-v4'
+gem 'pickadate-rails'
+gem 'bootstrap-datepicker-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
