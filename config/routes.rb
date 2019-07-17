@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :local_purchasing_orders
   resources :internetsecurities
   resources :bags
   resources :dslrcameras

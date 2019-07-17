@@ -1,2 +1,0 @@
-class LocalPurchasingOrder < ApplicationRecord
-end
