@@ -39,14 +39,18 @@
 
 <body>
     
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/noticefication' %>
+   
     
    
     
-    <div class='container-fluid'>
+    <div class='container'>
+         <%= render 'layouts/header' %>
+    <%= render 'layouts/noticefication' %>
     <%= yield %>
-
+   
     </div>
+    
   </body>
+ 
 </html>
+  <%= render 'layouts/footer' %>
