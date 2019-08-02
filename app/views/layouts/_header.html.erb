@@ -4,35 +4,73 @@
 
     <!-- Bootstrap core CSS -->
 
-
-
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary ">
-    <div class="container">
+<div class="container">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary ">
          <%= link_to "akobe", root_path, id: "prov", class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
                     <%= link_to "Home", root_path, id: "prov", class: 'navbar-brand' %>
                   
-                   
                 </li>
                 <li class="nav-item">
                      <%= link_to "Shops", people_shop_path, id: "prov", class: 'navbar-brand' %>
                 </li>
-                <li class="nav-item">
-                   <%= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>
-                </li>
-                <li class="nav-item">
-                   <%= link_to "Sell", new_post_path, id: "prov", class: 'navbar-brand' %>
-                </li>
+                <!--<li class="nav-item">-->
+                <!--   <%= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--   <%= link_to "Sell", new_post_path, id: "prov", class: 'navbar-brand' %>-->
+                <!--</li>-->
                 <li class="nav-item">
                     <%= link_to "Contact", home_index_path, id: "prov", class: 'navbar-brand' %>
                 </li>
             </ul>
+
+
+
+
+
+        
+            <div class="container">
+                <%= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-right') do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    <div class="input-group-btn">  
+      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+  </div>  
+<% end %>
+    
+	<!--<div class="row justify-content-center">-->
+ <!--                       <div class="col-12 col-md-10 col-lg-8">-->
+ <!--                           <form class="card card-sm">-->
+ <!--                               <div class="card-body row no-gutters align-items-center">-->
+ <!--                                   <div class="col-auto">-->
+ <!--                                       <i class="fas fa-search h4 text-body"></i>-->
+ <!--                                   </div>-->
+                                    <!--end of col-->
+ <!--                                   <div class="col">-->
+ <!--                                       <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search products or keywords">-->
+ <!--                                   </div>-->
+                                   
+                                    <!--end of col-->
+ <!--                                   <div class="col-auto">-->
+                                        
+ <!--                                   </div>-->
+                                    <!--end of col-->
+ <!--                               </div>-->
+ <!--                           </form>-->
+ <!--                       </div>-->
+                        <!--end of col-->
+ <!--                   </div>-->
+</div>
+
+
 
             <form class="form-inline my-2 my-lg-0">
                 <!--<div class="input-group input-group-sm">-->
@@ -69,6 +107,7 @@
 
  
   
+<br>
 <br>
 <br>
 <br>

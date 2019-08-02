@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :intelxphones
   resources :infinixphones
   resources :technophones
-  resources :retrofits
+  # resources :retrofits
   resources :hprrlaptops
   resources :hprlaptops
   resources :factoryrecertifiedacerlaptops
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'people/ticker'
   resources :home
   resources :contacts
-  resources :solarworks
+#   resources :solarworks
   resources :tonycycles
   resources :adeapartments
   resources :dreamscomputers
@@ -40,4 +40,14 @@ Rails.application.routes.draw do
   get 'home/contact_form' => 'home#index'
   get 'contacts/new' => 'dreamscomputers#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+ get '/search' => 'hprlaptops#search', :as => 'search_page' 
+# get '/search' => 'retrofits#search', :as => 'search_page'  
+ 
+   resources :retrofits do
+    get '/search' => 'retrofits#search', :as => 'search_page'
+   end
+  resources :solarworks do
+    get '/search' => 'solarworks#search', :as => 'search_page'
+   end
 end

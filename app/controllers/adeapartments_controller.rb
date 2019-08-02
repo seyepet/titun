@@ -5,6 +5,7 @@ class AdeapartmentsController < ApplicationController
   # GET /adeapartments.json
   def index
     @adeapartments = Adeapartment.all
+  
   end
 
   # GET /adeapartments/1
@@ -72,4 +73,6 @@ class AdeapartmentsController < ApplicationController
     def adeapartment_params
       params.require(:adeapartment).permit(:name, :address, :price, :description, :image_url, :category_id)
     end
+    
+    
 end

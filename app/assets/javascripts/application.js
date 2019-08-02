@@ -15,9 +15,5 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap
-//= require bootstrap-datepicker
-//= require pickadate/picker
-//= require pickadate/picker.date
-//= require pickadate/picker.time
 //= require_tree .
 
