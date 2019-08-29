@@ -28,12 +28,12 @@ internetsecurity = Category.create!(name: 'Internet Security')
 
 
 				
-Marketplace.create!(name: 'Trademark Registration', price: 50000, description: 'Trademark Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/trademark_registration.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
+Marketplace.create!(name: 'Trademark Registration', price: 55000, description: 'Trademark Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/trademark_registration.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
 Marketplace.create!(name: 'Company Incorporation', price: 50000, description: 'Company Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/company_incorporation.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
 Marketplace.create!(name: 'NGO', price: 120000, description: 'NGO Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/group+logo.PNG', vendor: 'mbiafrica', category_id: businesssupport.id)
 Marketplace.create!(name: 'NCC Filing', price: 30000, description: 'Class Lisence Filing', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/ncc_class_licence.png', vendor: 'mbiafrica', category_id: businesssupport.id)
 Marketplace.create!(name: 'Patent', price: 120000, description: 'Patent Registration', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/hdt4.png',  vendor: 'mbiafrica', category_id: businesssupport.id)
-Marketplace.create!(name: 'Business Name Registration', price: 20000, description: 'Business Name Registation', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/businessname_registration.png',  vendor: 'mbiafrica', category_id: propertyforsale.id)
+Marketplace.create!(name: 'Business Name Registration', price: 25000, description: 'Business Name Registation', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/ip_incorporation/businessname_registration.png',  vendor: 'mbiafrica', category_id: propertyforsale.id)
 Marketplace.create!(name: 'Apartment_Apartment', price: 60000000, description: 'Property with good title', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/akobeproperties/apapa.png',  vendor: 'Adeproperty', category_id: propertyforsale.id)
 Marketplace.create!(name: 'Graphic design Training', price: 50000, description: 'Graphic Design Training', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/graphic_desighner.PNG',  vendor: 'Hard Skills Hub', category_id: hardskillshub.id)
 Marketplace.create!(name: 'Web Application Training', price: 120000, description: 'Web Application Development Training', image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/hdt5.png',  vendor: 'Hard Skills Hub', category_id: hardskillshub.id)
