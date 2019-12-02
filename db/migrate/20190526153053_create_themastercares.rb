@@ -6,7 +6,7 @@ class CreateThemastercares < ActiveRecord::Migration[5.2]
       t.float :price
       t.string :description
       t.string :image_url
-      t.references :category, foreign_key: true
+    
 
       t.timestamps
     end

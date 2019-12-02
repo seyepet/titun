@@ -1,5 +1,7 @@
 {
   "name": "titun",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "webticker": "^3.0.0"
+  }
 }

@@ -12,7 +12,6 @@ class PeopleController < ApplicationController
     @adeapartments = Adeapartment.search(params[:term], params[:page])
     @solarworks = Solarwork.search(params[:term], params[:page])
     @marketplaces =Marketplace.search(params[:term], params[:page])
-    @categories = Category.all
     @tonycycles = Tonycycle.search(params[:term], params[:page])
    
    

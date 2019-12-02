@@ -19,7 +19,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'meta-tags'
 
-
+gem 'faker'
 
 
 

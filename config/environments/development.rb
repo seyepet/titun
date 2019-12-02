@@ -74,12 +74,17 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'gmail.com',
+    domain:               'http://www.akobe.org',
     user_name:            ENV["GMAIL_EMAIL"],
     password:             ENV["GMAIL_PASSWORD"],
     authentication:       'plain',
     enable_starttls_auto: true  }
     
-  config.action_mailer.default_url_options = {:host => "localhost:3000"}  
-    
+  # config.action_mailer.default_url_options = {:host => "localhost:3000"}  
+  # host = 'localhost:3000'
+  config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+  
+  
+  config.active_job.queue_adapter = :async
+  
 end

@@ -10,7 +10,7 @@ class CreateDslrcameras < ActiveRecord::Migration[5.2]
       t.string :image_url
       t.string :number
       t.string :vendor
-      t.references :category, foreign_key: true
+     #  t.references :category, foreign_key: true
 
       t.timestamps
     end

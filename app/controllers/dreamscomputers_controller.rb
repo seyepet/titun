@@ -6,7 +6,7 @@ class DreamscomputersController < ApplicationController
   def index
     @dreamscomputers = Dreamscomputer.all
     @contact = Contact.all
-    @contacts = Contact.all
+ 
     
   
   

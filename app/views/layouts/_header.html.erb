@@ -5,42 +5,36 @@
     <!-- Bootstrap core CSS -->
 
 <div class="container">
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary ">
-         <%= link_to "akobe", root_path, id: "prov", class: 'navbar-brand' %>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-primary ">
+         <%= link_to "AKOBE LIMITED", root_path, id: "prov", class: 'navbar-brand' %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
-                <li class="nav-item">
-                    <%= link_to "Home", root_path, id: "prov", class: 'navbar-brand' %>
+                <h4><li class="nav-item">
+                    <%= link_to "See Freelancers", root_path, id: "prov", class: 'navbar-brand' %>
                   
-                </li>
-                <li class="nav-item">
-                     <%= link_to "Shops", people_shop_path, id: "prov", class: 'navbar-brand' %>
-                </li>
+                </li></h4>
+               <h4> <li class="nav-item">
+                     <%= link_to "See Retailers", people_shop_path, id: "prov", class: 'navbar-brand' %>
+                </li></h4>
                 <!--<li class="nav-item">-->
-                <!--   <%= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>-->
+                <!--   <%#= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>-->
                 <!--</li>-->
                 <!--<li class="nav-item">-->
-                <!--   <%= link_to "Sell", new_post_path, id: "prov", class: 'navbar-brand' %>-->
+                <!--   <%#= link_to "Sell", new_post_path, id: "prov", class: 'navbar-brand' %>-->
                 <!--</li>-->
-                <li class="nav-item">
+               <h4> <li class="nav-item">
                     <a class="navbar-brand" href="https://form.myjotform.com/seyepet/wholesale-purchase-order-form">Order Now </a>
-                </li>
-                <li class="nav-item">
+                </li></h4>
+                <h4><li class="nav-item">
                     <%= link_to "Contact", home_index_path, id: "prov", class: 'navbar-brand' %>
-                </li>
+                </li></h4>
             </ul>
 
-
-
-
-
-        
-            <div class="container">
-                <%= form_tag(search_page_path, :method => "get",   
-    class: 'navbar-form navbar-right') do %>  
+<%= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
   <div class="input-group">  
     <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
     <div class="input-group-btn">  
@@ -48,6 +42,20 @@
     </div>  
   </div>  
 <% end %>
+
+
+
+        
+            <!--<div class="container">-->
+                <%#= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-right') do %>  
+  <!--<div class="input-group">  -->
+  <!--  <%#= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  -->
+  <!--  <div class="input-group-btn">  -->
+  <!--    <%#= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  -->
+  <!--  </div>  -->
+  <!--</div>  -->
+<%# end %>
     
 	<!--<div class="row justify-content-center">-->
  <!--                       <div class="col-12 col-md-10 col-lg-8">-->
@@ -109,11 +117,7 @@
 
 
  
-  
-<br>
-<br>
-<br>
-<br>
+
   
  <!--<div class="secondnavbar" class="container-fluid">-->
   
@@ -124,20 +128,20 @@
  <!--             <a class="p-2 text-dark" href="">08113336667</a>-->
  <!--               <a class="p-2 text-dark" href="">akobelimited@gmail.com</a>-->
  <!--              <a class="p-2 text-dark" href="">Support</a>-->
- <!--                <%= link_to "Blog", root_path, id: "prov" %>-->
- <!--             <%= link_to "Pricing", root_path, id: "prov" %>-->
+ <!--                <%#= link_to "Blog", root_path, id: "prov" %>-->
+ <!--             <%#= link_to "Pricing", root_path, id: "prov" %>-->
               
  <!--             </nav>-->
               
  <!--             <p class="navbar-text pull-right">-->
- <!--               <% if user_signed_in? %>-->
- <!--                 Logged in as <strong><%= current_user.email %></strong>.-->
- <!--                 <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |-->
- <!--                 <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>-->
- <!--               <% else %>-->
- <!--                 <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |-->
- <!--                 <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>-->
- <!--               <% end %>-->
+ <!--               <%# if user_signed_in? %>-->
+ <!--                 Logged in as <strong><%#= current_user.email %></strong>.-->
+ <!--                 <%#= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |-->
+ <!--                 <%#= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>-->
+ <!--               <%# else %>-->
+ <!--                 <%#= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |-->
+ <!--                 <%#= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>-->
+ <!--               <%# end %>-->
  <!--               </p>-->
  <!--       </div>-->
  <!--       </div>-->
@@ -145,3 +149,25 @@
 
 
 
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-auto mb-9">-->
+<!--             <div class="card" class="justify-content-center" styles="width: auto";>-->
+<!--              <div class="card-header">-->
+<!--                <h3>Service Categories (<%#= @categories.length %>)</h3>-->
+<!--              </div>-->
+<!--              <%# @categories.each do |category| %>-->
+<!--              <ul class="list-group list-group-flush">-->
+<!--                <%#= link_to category_products_path(category) do %>-->
+<!--                <li class="list-group-item"> -->
+<!--                <h4><%#= category.title %></h4>-->
+<!--               (<%#= category.products_count %> products)-->
+<!--              <%# end %></li>-->
+            <!--<li class="list-group-item">Dapibus ac facilisis in</li>-->
+<!--            <%# end %>-->
+<!--          </ul>-->
+<!--</div>-->
+
+<!--    </div>-->
+    <br />
+     

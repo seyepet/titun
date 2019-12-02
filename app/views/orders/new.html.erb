@@ -1,0 +1,40 @@
+
+    <div class="container">
+    <div class="col-sm-3">
+        
+    </div>
+    <div class="col-sm-6">
+            <h2>Checkout</h2>
+
+            <%= form_for @order, url: checkout_path do |f| %> 
+
+             <div class="form-group has-success has-feedback">
+                <%= f.label :first_name, class: "sr-only" %>
+                <%= f.text_field :first_name, class: "form-control", placeholder: "First Name", :required => 'required' %>
+              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
+
+            <div class="form-group has-success has-feedback">
+                <%= f.label :last_name, class: "sr-only" %>                  
+                <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name", :required => 'required' %>
+             <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
+            
+            <div class="form-group has-success has-feedback">
+                <%= f.label :last_name, class: "sr-only" %>                  
+                <%= f.email_field :email, class: "form-control", placeholder: "Email", :required => 'required' %>
+             <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
+            
+            <div class="modal-footer">
+                 <%= f.submit 'Checkout',class: "btn btn-primary" %>
+            </div>     
+
+                <% end %>
+            </div>
+            <div class="col-sm-3">
+        
+            </div>
+</div>
+
+
