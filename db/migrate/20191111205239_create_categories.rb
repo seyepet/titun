@@ -1,14 +1,5 @@
 class CreateCategories < ActiveRecord::Migration[5.2]
-  namespace :db do
-  desc "Truncate all tables"
-  task :truncate => :environment do
-    conn = ActiveRecord::Base.connection
-    postgres = "SELECT tablename FROM pg_catalog.pg_tables WHERE schemaname='public'"
-    tables = conn.execute(postgres).map { |r| r['categories'] }
-    tables.delete "schema_migrations"
-    tables.each { |t| conn.execute("TRUNCATE \"#{t}\"") }
-  end
-end  
+  
   def change
     create_table :categories do |t|
       t.string :title
