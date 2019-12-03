@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_185049) do
+ActiveRecord::Schema.define(version: 2019_11_11_205140) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.decimal "price"
     t.string "description"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_adeapartments_on_category_id"
   end
 
   create_table "bags", force: :cascade do |t|
@@ -63,8 +65,20 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
+    t.string "description"
     t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email_address"
+    t.string "phone_number"
+    t.text "body"
+    t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -77,8 +91,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_dreamscomputers_on_category_id"
   end
 
   create_table "dslrcameras", force: :cascade do |t|
@@ -104,8 +120,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_factoryrecertifiedacerlaptops_on_category_id"
   end
 
   create_table "factoryrecertifieddelllaptops", force: :cascade do |t|
@@ -117,8 +135,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_factoryrecertifieddelllaptops_on_category_id"
   end
 
   create_table "hprlaptops", force: :cascade do |t|
@@ -130,8 +150,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_hprlaptops_on_category_id"
   end
 
   create_table "hprrlaptops", force: :cascade do |t|
@@ -143,8 +165,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_hprrlaptops_on_category_id"
   end
 
   create_table "infinixphones", force: :cascade do |t|
@@ -156,8 +180,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_infinixphones_on_category_id"
   end
 
   create_table "intelxphones", force: :cascade do |t|
@@ -169,8 +195,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_intelxphones_on_category_id"
   end
 
   create_table "internetsecurities", force: :cascade do |t|
@@ -198,8 +226,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_itelphones_on_category_id"
   end
 
   create_table "marketplaces", force: :cascade do |t|
@@ -209,8 +239,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "vendor"
     t.string "image_url"
     t.string "number"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_marketplaces_on_category_id"
   end
 
   create_table "newhplaptops", force: :cascade do |t|
@@ -222,33 +254,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "order_items", force: :cascade do |t|
-    t.integer "quantity", default: 0
-    t.decimal "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "order_id"
-    t.bigint "product_id"
-    t.index ["order_id"], name: "index_order_items_on_order_id"
-    t.index ["product_id"], name: "index_order_items_on_product_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.decimal "sub_total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "token"
-    t.string "status", default: "cart"
-    t.string "email"
-    t.text "message"
-    t.integer "phone_number"
-    t.string "address"
+    t.index ["category_id"], name: "index_newhplaptops_on_category_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -274,25 +283,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "product_categories", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_product_categories_on_category_id"
-    t.index ["product_id"], name: "index_product_categories_on_product_id"
-  end
-
-  create_table "product_variants", force: :cascade do |t|
-    t.string "title"
-    t.decimal "price"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "product_id"
-    t.index ["product_id"], name: "index_product_variants_on_product_id"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -300,15 +290,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "vendor"
-    t.integer "years_of_experience"
-    t.string "skills"
-    t.integer "number_of_jobs"
-    t.string "speciality"
-    t.text "profile"
-    t.string "location"
-    t.string "state"
-    t.string "country"
   end
 
   create_table "retrofits", force: :cascade do |t|
@@ -320,8 +301,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_retrofits_on_category_id"
   end
 
   create_table "rofimachines", force: :cascade do |t|
@@ -330,8 +313,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "description"
     t.decimal "price"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_rofimachines_on_category_id"
   end
 
   create_table "schools", force: :cascade do |t|
@@ -340,8 +325,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.float "price"
     t.string "description"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_schools_on_category_id"
   end
 
   create_table "solarworks", force: :cascade do |t|
@@ -350,8 +337,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "description"
     t.decimal "price"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_solarworks_on_category_id"
   end
 
   create_table "technophones", force: :cascade do |t|
@@ -363,8 +352,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_technophones_on_category_id"
   end
 
   create_table "themastercares", force: :cascade do |t|
@@ -373,8 +364,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.float "price"
     t.string "description"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_themastercares_on_category_id"
   end
 
   create_table "tonycycles", force: :cascade do |t|
@@ -386,8 +379,10 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.decimal "price"
     t.boolean "purchased"
     t.string "image_url"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_tonycycles_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -404,10 +399,23 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "order_items", "orders"
-  add_foreign_key "order_items", "products"
+  add_foreign_key "adeapartments", "categories"
+  add_foreign_key "dreamscomputers", "categories"
+  add_foreign_key "factoryrecertifiedacerlaptops", "categories"
+  add_foreign_key "factoryrecertifieddelllaptops", "categories"
+  add_foreign_key "hprlaptops", "categories"
+  add_foreign_key "hprrlaptops", "categories"
+  add_foreign_key "infinixphones", "categories"
+  add_foreign_key "intelxphones", "categories"
+  add_foreign_key "itelphones", "categories"
+  add_foreign_key "marketplaces", "categories"
+  add_foreign_key "newhplaptops", "categories"
   add_foreign_key "posts", "users"
-  add_foreign_key "product_categories", "categories"
-  add_foreign_key "product_categories", "products"
-  add_foreign_key "product_variants", "products"
+  add_foreign_key "retrofits", "categories"
+  add_foreign_key "rofimachines", "categories"
+  add_foreign_key "schools", "categories"
+  add_foreign_key "solarworks", "categories"
+  add_foreign_key "technophones", "categories"
+  add_foreign_key "themastercares", "categories"
+  add_foreign_key "tonycycles", "categories"
 end
