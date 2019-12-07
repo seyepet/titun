@@ -232,10 +232,10 @@ Adeapartment.create!(address: 'Ifo Farm Land Per Acre', price: 7500000, descript
 
 
 
-Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 273700, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
-Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
-Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 273700, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
-Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
+# Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 273700, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
+# Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
+# Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Petrol Engine', price: 273700, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
+# Rofimachine.create!(name: 'Stainless Steel Pepper Grinding Machine - Electric Motor Engine', price: 320000, image_url: 'https://s3.us-east-2.amazonaws.com/babanla/assets/partners/Pepper-Grinder.jpg')
 
 
 
