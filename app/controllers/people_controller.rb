@@ -8,11 +8,11 @@ class PeopleController < ApplicationController
     @page_title = 'Akobe Limited'
     @page_description = 'Online Retails Store that offers Best Quality for the Best Price and also Give Cash Back to the Customers'
     @page_keywords = 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research'
-    @dreamscomputers = Dreamscomputer.search(params[:term], params[:page])
-    @adeapartments = Adeapartment.search(params[:term], params[:page])
-    @solarworks = Solarwork.search(params[:term], params[:page])
-    @marketplaces =Marketplace.search(params[:term], params[:page])
-    @tonycycles = Tonycycle.search(params[:term], params[:page])
+    @dreamscomputers = Dreamscomputer.all
+    @adeapartments = Adeapartment.all
+    @solarworks = Solarwork.all
+    @marketplaces =Marketplace.all
+    @tonycycles = Tonycycle.all
    
    
   end

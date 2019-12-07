@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_03_185049) do
+ActiveRecord::Schema.define(version: 2019_11_11_094541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,13 +58,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string "title"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -226,31 +219,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "order_items", force: :cascade do |t|
-    t.integer "quantity", default: 0
-    t.decimal "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "order_id"
-    t.bigint "product_id"
-    t.index ["order_id"], name: "index_order_items_on_order_id"
-    t.index ["product_id"], name: "index_order_items_on_product_id"
-  end
-
-  create_table "orders", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.decimal "sub_total"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "token"
-    t.string "status", default: "cart"
-    t.string "email"
-    t.text "message"
-    t.integer "phone_number"
-    t.string "address"
-  end
-
   create_table "people", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -274,43 +242,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "product_categories", force: :cascade do |t|
-    t.bigint "product_id"
-    t.bigint "category_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["category_id"], name: "index_product_categories_on_category_id"
-    t.index ["product_id"], name: "index_product_categories_on_product_id"
-  end
-
-  create_table "product_variants", force: :cascade do |t|
-    t.string "title"
-    t.decimal "price"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.bigint "product_id"
-    t.index ["product_id"], name: "index_product_variants_on_product_id"
-  end
-
-  create_table "products", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.decimal "price"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "vendor"
-    t.integer "years_of_experience"
-    t.string "skills"
-    t.integer "number_of_jobs"
-    t.string "speciality"
-    t.text "profile"
-    t.string "location"
-    t.string "state"
-    t.string "country"
-  end
-
   create_table "retrofits", force: :cascade do |t|
     t.string "name"
     t.string "model"
@@ -320,16 +251,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.string "image_url"
     t.string "number"
     t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "rofimachines", force: :cascade do |t|
-    t.string "name"
-    t.string "code"
-    t.string "description"
-    t.decimal "price"
-    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -404,10 +325,5 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "order_items", "orders"
-  add_foreign_key "order_items", "products"
   add_foreign_key "posts", "users"
-  add_foreign_key "product_categories", "categories"
-  add_foreign_key "product_categories", "products"
-  add_foreign_key "product_variants", "products"
 end

@@ -26,8 +26,8 @@
 <!--</ol>-->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-   <h3> <li class="breadcrumb-item"><%= link_to "Categories", root_path %> /</li></h3>
-     <h3> <li class="breadcrumb-item"><%= @category.title %>/ </li></h3>
+   <h3> <li class="breadcrumb-item"><%#= link_to "Categories", root_path %> /</li></h3>
+     <h3> <li class="breadcrumb-item"><%#= @category.title %>/ </li></h3>
    <h3> <li class="breadcrumb-item active" aria-current="page"> Service Providers</li></h3>
     
   </ol>
@@ -44,22 +44,22 @@
         <!--<div class="album text-muted">-->
           
               <div class="row">
-                 <% @products.each do |product| %>
+                 <%# @products.each do |product| %>
                   <div class="col-sm-3 col-md-3 col-sm-6">
                  <div class="card card mb-3 style="max-width: 8rem;", class: "mx-auto d-block">
                  <h5 class="card-title  text-center"  style="margin-top: 10px; margin-bottom:-13px;"><%= product.vendor %> <br>(<%= product.speciality %> )</h5>
-                   <%= link_to image_tag  product.image, class: "img-responsive img-thumbnail",  class: "h-100 d-inline-block", class: "w-100 p-5", style: 'height:30%;width:auto;' %></a>
+                   <%#= link_to image_tag  product.image, class: "img-responsive img-thumbnail",  class: "h-100 d-inline-block", class: "w-100 p-5", style: 'height:30%;width:auto;' %></a>
                     <h5 class="card-title  text-center"  style="margin-top: -8px; margin-bottom:5px;"><%= product.title %> <br>₦(<%= product.price %>)</h5>
                    <div class="row">
                      <div class="col">
-                     <%= form_tag order_items_path do %>
-                     <%= hidden_field_tag :product_id, product.id %>
-                     <h6><p class=" price card-header text-center"><%= number_field_tag :quantity, 1 %></p></h6> 
+                     <%#= form_tag order_items_path do %>
+                     <%#= hidden_field_tag :product_id, product.id %>
+                     <h6><p class=" price card-header text-center"><%#= number_field_tag :quantity, 1 %></p></h6> 
                     
-                     <h6><p class=" price card-header text-center"> <%= submit_tag "Add to Cart" , class: "btn btn-info btn-sm" %>|<%= submit_tag "View Profile" , class: "btn btn-warning btn-sm" %></p></h6>
+                     <h6><p class=" price card-header text-center"> <%#= submit_tag "Add to Cart" , class: "btn btn-info btn-sm" %>|<%= submit_tag "View Profile" , class: "btn btn-warning btn-sm" %></p></h6>
                     
                    
-                  <% end %>
+                  <%# end %>
                   </div>
                  </div>
                </div>
