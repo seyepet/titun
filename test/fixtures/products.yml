@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  price: 9.99
+  image: MyString
+  vendor: MyString
+  years_of_experience: 1
+  skills: MyString
+  number_of_jobs: 1
+  speciality: MyString
+  profile: MyText
+  location: MyString
+  state: MyString
+  country: MyString
+
+two:
+  title: MyString
+  description: MyText
+  price: 9.99
+  image: MyString
+  vendor: MyString
+  years_of_experience: 1
+  skills: MyString
+  number_of_jobs: 1
+  speciality: MyString
+  profile: MyText
+  location: MyString
+  state: MyString
+  country: MyString
