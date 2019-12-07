@@ -1,49 +1,26 @@
 <h2>Current Cart</h2>
 
-<div class="container">
-	<table id="cart" class="table table-hover table-condensed">
-    <thead>
-						
+<table>
+  <thead>
     <tr>
-     <h3> <td>Product</td></h3>
-     <h3> <td>Price</td></h3>
-      <h3><td>Quantity</td></h3>
-     <h3> <td></td>
+      <td>Product</td>
+      <td>Price</td>
+      <td>Quantity</td>
+      <td></td>
     </tr>
   </thead>
   <tbody>
     <% @items.each do |item| %>
       <tr>
-       <h3> <td data-th="Product"><%= item.product.title %></td></h3>
-       <h3> <td data-th="Price">₦<%= item.price %></td></h3>
-       <h3> <td data-th="Quantity"><%= item.quantity %></td></h3>
-        <div class= "hidden">
-        <%#= f.label :nickname %>
-        <%#= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-      </div>
+        <td><%= item.product.title %></td>
+        <td><%= number_to_currency item.price %></td>
+        <td><%= item.quantity %></td>
         <td>
           <%= form_for item, method: :delete do |f| %>
-            <%= f.submit "Remove" %> 
+            <%= f.submit "Remove" %>
           <% end %>
-          
-          <!--<%#= link_to "Send Order by email", new_order_item_url, class: "btn btn-warning btn-sm" %>-->
-         
-        
         </td>
       </tr>
     <% end %>
   </tbody>
-  
-  <tfoot>
-      <tr>
-          <td colspan="4" align="right">Sub-Total
-            ₦<%=  current_cart.sub_total %>  
-          </td>
-      </tr>
-  </tfoot>
-  
 </table>
- <h2><p class=" price card-header text-center"> <%= link_to 'checkout', checkout_path %> </p></h2> 
-                    
-</div>
-</div>
