@@ -62,6 +62,13 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "dreamscomputers", force: :cascade do |t|
     t.string "name"
     t.string "model"
@@ -400,6 +407,7 @@ ActiveRecord::Schema.define(version: 2019_12_03_185049) do
   add_foreign_key "order_items", "orders"
   add_foreign_key "order_items", "products"
   add_foreign_key "posts", "users"
+  add_foreign_key "product_categories", "categories"
   add_foreign_key "product_categories", "products"
   add_foreign_key "product_variants", "products"
 end
