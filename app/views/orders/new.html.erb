@@ -1,4 +1,5 @@
 
+  
     <div class="container">
     <div class="col-sm-3">
         
@@ -23,6 +24,7 @@
             <div class="form-group has-success has-feedback">
                 <%= f.label :last_name, class: "sr-only" %>                  
                 <%#= f.email_field :email, class: "form-control", placeholder: "Email", :required => 'required' %>
+                 <%= recaptcha_tags %>
              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
             </div>
             
@@ -33,7 +35,8 @@
                 <% end %>
             </div>
             <div class="col-sm-3">
-        
+                  <%= invisible_recaptcha_tags text: 'Submit form' %>
+                  
             </div>
 </div>
 

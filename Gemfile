@@ -6,7 +6,8 @@ ruby '2.6.3'
 gem 'devise'
 
 gem "recaptcha"
-
+gem 'new_google_recaptcha'
+gem 'invisible_captcha'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
