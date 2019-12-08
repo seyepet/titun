@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_07_210638) do
+ActiveRecord::Schema.define(version: 2019_12_08_003722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -227,12 +227,14 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
   end
 
   create_table "order_items", force: :cascade do |t|
-    t.integer "quantity", null: false
-    t.decimal "price", precision: 15, scale: 2, null: false
+    t.integer "quantity"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "order_id", null: false
+    t.bigint "order_id"
+    t.bigint "product_id"
     t.index ["order_id"], name: "index_order_items_on_order_id"
+    t.index ["product_id"], name: "index_order_items_on_product_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -241,6 +243,10 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
     t.decimal "sub_total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "token"
+    t.string "status", default: "cart"
+    t.bigint "product_id"
+    t.index ["product_id"], name: "index_orders_on_product_id"
   end
 
   create_table "people", force: :cascade do |t|
@@ -267,8 +273,8 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
   end
 
   create_table "product_categories", force: :cascade do |t|
-    t.bigint "product_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "product_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_product_categories_on_category_id"
@@ -276,8 +282,8 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
   end
 
   create_table "product_variants", force: :cascade do |t|
-    t.string "title", null: false
-    t.decimal "price", precision: 15, scale: 2, null: false
+    t.string "title"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "product_id"
@@ -285,11 +291,11 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "title", null: false
+    t.string "title"
     t.text "description"
     t.decimal "price"
     t.string "image"
-    t.string "vendor", null: false
+    t.string "vendor"
     t.integer "years_of_experience"
     t.string "skills"
     t.integer "number_of_jobs"
@@ -386,6 +392,8 @@ ActiveRecord::Schema.define(version: 2019_12_07_210638) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "order_items", "orders"
+  add_foreign_key "order_items", "products"
+  add_foreign_key "orders", "products"
   add_foreign_key "posts", "users"
   add_foreign_key "product_categories", "categories"
   add_foreign_key "product_categories", "products"
