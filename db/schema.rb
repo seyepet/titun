@@ -36,32 +36,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_003722) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "adeapartments", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "bags", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.string "size"
-    t.string "about"
-    t.string "material"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+  
   create_table "categories", force: :cascade do |t|
     t.string "title"
     t.string "image"
@@ -69,162 +44,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_003722) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "dreamscomputers", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "dslrcameras", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "code"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "factoryrecertifiedacerlaptops", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "factoryrecertifieddelllaptops", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "hprlaptops", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "hprrlaptops", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "infinixphones", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "intelxphones", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "internetsecurities", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.string "user"
-    t.string "capacity"
-    t.string "about"
-    t.string "noofdevice"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "itelphones", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "marketplaces", force: :cascade do |t|
-    t.string "name"
-    t.decimal "price"
-    t.string "description"
-    t.string "vendor"
-    t.string "image_url"
-    t.string "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "newhplaptops", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ 
 
   create_table "order_items", force: :cascade do |t|
     t.integer "quantity"
@@ -249,12 +69,7 @@ ActiveRecord::Schema.define(version: 2019_12_08_003722) do
     t.index ["product_id"], name: "index_orders_on_product_id"
   end
 
-  create_table "people", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -308,74 +123,10 @@ ActiveRecord::Schema.define(version: 2019_12_08_003722) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "retrofits", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ 
+  
+ 
 
-  create_table "schools", force: :cascade do |t|
-    t.string "name"
-    t.string "courses"
-    t.float "price"
-    t.string "description"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "solarworks", force: :cascade do |t|
-    t.string "name"
-    t.string "code"
-    t.string "description"
-    t.decimal "price"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "technophones", force: :cascade do |t|
-    t.string "name"
-    t.string "model"
-    t.string "colour"
-    t.decimal "price"
-    t.string "description"
-    t.string "image_url"
-    t.string "number"
-    t.string "vendor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "themastercares", force: :cascade do |t|
-    t.string "name"
-    t.string "courses"
-    t.float "price"
-    t.string "description"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tonycycles", force: :cascade do |t|
-    t.string "brand"
-    t.string "model"
-    t.date "year"
-    t.string "gear_type"
-    t.integer "number_of_wheels"
-    t.decimal "price"
-    t.boolean "purchased"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
