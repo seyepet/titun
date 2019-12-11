@@ -1,3 +1,0 @@
-class Infinixphone < ApplicationRecord
-  
-end

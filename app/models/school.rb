@@ -1,4 +1,0 @@
-class School < ApplicationRecord
- 
-  
-end

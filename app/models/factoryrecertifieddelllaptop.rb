@@ -1,4 +1,0 @@
-class Factoryrecertifieddelllaptop < ApplicationRecord
-  
-   
-end

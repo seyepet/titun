@@ -1,5 +1,0 @@
-class Itelphone < ApplicationRecord
- 
-  
-end
-

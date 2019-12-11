@@ -1,4 +1,0 @@
-class Themastercare < ApplicationRecord
-
-  
-end

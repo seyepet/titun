@@ -22,12 +22,22 @@
             </div>
             
             <div class="form-group has-success has-feedback">
-                <%= f.label :last_name, class: "sr-only" %>                  
-                <%#= f.email_field :email, class: "form-control", placeholder: "Email", :required => 'required' %>
-                 <%= recaptcha_tags %>
+                <%= f.label :email, class: "sr-only" %>                  
+                <%= f.email_field :email, class: "form-control", placeholder: "Email", :required => 'required' %>
              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
             </div>
             
+             <div class="form-group has-success has-feedback">
+                <%= f.label :address, class: "sr-only" %>                  
+                <%= f.text_field :deliveryaddress, class: "form-control", placeholder: "Address", :required => 'required' %>
+             <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
+            
+            <div class="form-group has-success has-feedback">
+                <%= f.label :phone_number, class: "sr-only" %>                  
+                <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number", :required => 'required' %>
+             <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+            </div>
             <div class="modal-footer">
                  <%= f.submit 'Checkout',class: "btn btn-primary" %>
             </div>     

@@ -1,3 +1,0 @@
-class Dslrcamera < ApplicationRecord
-
-end

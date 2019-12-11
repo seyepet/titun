@@ -1,4 +1,0 @@
-class Factoryrecertifiedacerlaptop < ApplicationRecord
-
-  
-end
