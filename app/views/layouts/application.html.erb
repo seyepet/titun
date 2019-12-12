@@ -46,10 +46,10 @@
     <div class='container'>
         <p>
        <%= link_to "Categories", categories_path%>
-      <!--<%#= link_to pluralize(current_cart.items_count, 'item'), cart_path %>-->
+      <%= link_to pluralize(current_cart.items_count, 'item'), cart_path %>
    </p>
          <%= render 'layouts/header' %>
-    <%= render 'layouts/noticefication' %>
+   
     <%= yield  %>
    
     </div>

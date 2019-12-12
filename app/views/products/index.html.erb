@@ -1,29 +1,7 @@
+<br><br><br>
 
 
-
-  <%#= link_to "Categories", root_path %> 
-  <%#= @category.title %> 
-<!--  Products-->
-
-
-  <%# @products.each do |product| %>
-<!--    <li >-->
-      <%#= product.title %> <%#= number_to_currency product.price %>
-
-      <%#= form_tag order_items_path do %>
-        <%#= hidden_field_tag :product_id, product.id %>
-        <%#= number_field_tag :quantity, 1 %>
-        <%#= submit_tag "Add to Cart"  %>
-      <%# end %>
-
-<!--      <ul >-->
-<!--        <%# product.variants.each do |variant| %>-->
-          <%#= variant.title %> <%#= number_to_currency variant.price %>
-        <%# end %>
-<!--      </ul>-->
-<!--    </li>-->
-  <%# end %>
-<!--</ol>-->
+  
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
    <h3> <li class="breadcrumb-item"><%= link_to "Categories", root_path %> /</li></h3>
@@ -32,11 +10,7 @@
     
   </ol>
 </nav>
-<!--<h2>-->
-<%#= link_to "Categories", root_path %> 
-  <%#= @category.title %> 
-<!--  Products-->
-<!--</h2>-->
+
 
  <div class="card-group">
     <div class="container">
@@ -83,35 +57,6 @@
 
 
 
-
-
-
-<h2>
-  <%#= link_to "Categories", root_path %> /
-  <%#= @category.title %> /
-  Products
-</h2>
-
-<ol>
-  <%# @products.each do |product| %>
-    <li>
-      <%#= product.title %> (<%#= number_to_currency product.price %>)
-
-      <%#= form_tag order_items_path do %>
-        <%#= hidden_field_tag :product_id, product.id %>
-        <%#= number_field_tag :quantity, 1 %>
-        <%#= submit_tag "Add to Cart" %>
-      <%# end %>
-
-      <ul>
-        <%# product.variants.each do |variant| %>
-          <li><%#= variant.title %> (<%#= number_to_currency variant.price %>)</li>
-        <%# end %>
-      </ul>
-    </li>
-  <%# end %>
-</ol>
- 
 
 
 
