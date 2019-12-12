@@ -13,11 +13,11 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <h4><li class="nav-item">
-                    <%= link_to "See Freelancers", root_path, id: "prov", class: 'navbar-brand' %>
+                    <%#= link_to "See Freelancers", root_path, id: "prov", class: 'navbar-brand' %>
                   
                 </li></h4>
                <h4> <li class="nav-item">
-                     <%= link_to "See Retailers", category_products_path, id: "prov", class: 'navbar-brand' %>
+                     <%#= link_to "See Retailers", category_products_path, id: "prov", class: 'navbar-brand' %>
                 </li></h4>
                 <!--<li class="nav-item">-->
                 <!--   <%#= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>-->
@@ -88,18 +88,18 @@
                 <!--    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">-->
                 <!--    <div class="input-group-append">-->
                         <!--<button type="button" class="btn btn-secondary btn-number">-->
-                        <!--    <%= form_tag(root_path, method: :get) do %>-->
-                        <!--       <%= text_field_tag :term, params[:term] %>-->
-                        <!--           <%= submit_tag 'Search', name: nil, class: 'btn btn-secondary btn-number' %>-->
-                        <!--            <% end %>-->
+                        <!--    <%#= form_tag(root_path, method: :get) do %>-->
+                        <!--       <%#= text_field_tag :term, params[:term] %>-->
+                        <!--           <%#= submit_tag 'Search', name: nil, class: 'btn btn-secondary btn-number' %>-->
+                        <!--            <%# end %>-->
                         <!--    <i class="fa fa-search"></i>-->
                         <!--</button>-->
                 <!--    </div>-->
                 <!--</div>-->
-                <!--<%= form_tag(root_path, method: :get) do %>-->
-                <!--               <%= text_field_tag :term, params[:term] %>-->
-                <!--                   <%= submit_tag 'Search', name: nil, class: 'btn btn-secondary btn-number' %>-->
-                <!--                    <% end %>-->
+                <!--<%#= form_tag(root_path, method: :get) do %>-->
+                <!--               <%#= text_field_tag :term, params[:term] %>-->
+                <!--                   <%#= submit_tag 'Search', name: nil, class: 'btn btn-secondary btn-number' %>-->
+                <!--                    <%# end %>-->
                     
                    <% if user_signed_in? %>-->
                   Logged in as <strong><%= current_user.email %></strong>.
