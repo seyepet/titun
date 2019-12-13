@@ -28,7 +28,7 @@
                      <div class="col">
                      <%= form_tag order_items_path do %>
                      <%= hidden_field_tag :product_id, product.id %>
-                     <!--<h6><p class=" price card-header text-center"><%#= number_field_tag :quantity, 1 %></p></h6> -->
+                     <h6><p class=" price card-header text-center"><%= number_field_tag :quantity, 1 %></p></h6> 
                     
                      <h6><p class=" price card-header text-center"> <%= submit_tag "Add to Cart" , class: "btn btn-info btn-sm" %>|<%= submit_tag "View Profile" , class: "btn btn-warning btn-sm" %></p></h6>
                      
