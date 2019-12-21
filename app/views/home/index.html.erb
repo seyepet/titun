@@ -1,46 +1,11 @@
-
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-2">
-      
-    </div>
-    <div class="col-sm-8">
-      
-      <%= form_for @contact, url:  {action: "create"}, html: {class: "contact_form"},  remote: true do |f| %>
-      
-     <div class="form-group">
-       
-        <%= f.text_field  :name, required: true, class: "contact-form-text-area", class: "form-control",  placeholder: "Name" %>
-     </div>    
-    <div class="form-group">
-     
-        <%= f.text_field :email, required: true, class: "contact-form-text-area", class: "form-control",  placeholder: "email" %>
-    </div>
-    <div class="form-group">    
-     
-      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                        placeholder: "Send me a message", class: "form-control" %>
-    </div>                  
-
-      <div class= "hidden">
-       
-        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
-      </div>
-
-      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
-    </div>
-  <% end %>
-  <div class="col-md-6" id="flash-message">
-    <%= render 'flash' %>
-  </div>
-    </div>
-    <div class="col-sm-2">
-      
-      
-    </div>
-  </div>
+<div class="container"  id="contact" style="margin-top:100px;">
+    
+    <div class="col-sm-4" id="contact" style="margin-top:100px;"></div>
+<div class="col-sm-4">
+   <%= render 'contact_form' %>
 </div>
-
+<div class="col-sm-4"></div>
+    
+</div>
+    
 

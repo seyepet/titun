@@ -10,8 +10,11 @@ class OrdersController < ApplicationController
     
     if @order.update_attributes(order_params.merge(status:'open'))
       session[:cart_token] = nil
+      
+      flash[:success] = t('flash.order.success')
       redirect_to root_path
     else
+      flash.now[:error] = t('flash.order.error_html')
       render :new
     
     end  

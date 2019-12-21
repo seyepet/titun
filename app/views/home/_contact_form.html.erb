@@ -1,33 +1,91 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <%= form_for @contact, url: home_index_path, remote: true do |f| %>
-    <!--<div class="col-md-6">-->
-        <%= f.label :name %></br>
-        <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
+<!-- app/views/home/_contact_form.html.erb -->
 
-        <%= f.label :email %></br>
-        <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
+<%#= form_for @contact, url: home_index_path, remote: true do |f| %>
+<%#= form_for(@contact, url: home_index_path) remote: true do |f| %>
+<%= form_for @contact, as: :post, url: home_index_path, remote: true do |f| %>
+<%#= form_for @contact, url: home_index_path, remote: true do |f| %>
+    <div class="col-md-12">
+        <%= f.label :name, class: "form-label" %></br>
+        <%= f.text_field  :name, required: true, class: "contact-form-text-area" , class: "form-control"%></br>
 
-      <%= f.label :message %></br>
+        <%= f.label :email, class: "form-label" %></br>
+        <%= f.text_field :email, required: true, class: "contact-form-text-area", class: "form-control" %></br>
+
+      <%= f.label :message , class: "form-label"%></br>
       <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                        placeholder: "Send a message to Glenn."%></br>
+                        placeholder: "Send me a message", class: "form-control"%></br>
 
       <div class= "hidden">
         <%= f.label :nickname %>
         <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
       </div>
-
+      
+      <%= invisible_captcha %>
+ 
       <%= f.submit 'Send Message', class: 'btn btn-primary' %>
-    <!--</div>-->
+    </div>
   <% end %>
   <div class="col-md-6" id="flash-message">
     <%= render 'flash' %>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col">-->
+<!--      <%#= form_for @contact, url: home_index_path, remote: true do |f| %>-->
+    <!--<div class="col-md-6">-->
+<!--        <%#= f.label :name %></br>-->
+<!--        <%#= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>-->
+
+<!--        <%#= f.label :email %></br>-->
+<!--        <%#= f.text_field :email, required: true, class: "contact-form-text-area" %></br>-->
+
+<!--      <%#= f.label :message %></br>-->
+<!--      <%#= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",-->
+<!--                        placeholder: "Send a message to Glenn."%></br>-->
+
+<!--      <div class= "hidden">-->
+<!--        <%#= f.label :nickname %>-->
+<!--        <%#= f.text_field :nickname, :hint => 'Leave this field blank!' %>-->
+<!--      </div>-->
+
+<!--      <%#= f.submit 'Send Message', class: 'btn btn-primary' %>-->
+    <!--</div>-->
+<!--  <%# end %>-->
+<!--  <div class="col-md-6" id="flash-message">-->
+<!--    <%#= render 'flash' %>-->
+<!--  </div>-->
       
-    </div>
-    <div class="col-12 col-sm-4">
-      <div class="card bg-light mb-3">
+<!--    </div>-->
+<!--    <div class="col-12 col-sm-4">-->
+<!--      <div class="card bg-light mb-3">-->
                 <!--<div class="card-header bg-success text-white text-uppercase"><i class="fa fa-home"></i> Address</div>-->
                 <!--<div class="card-body">-->
                 <!--    <p>3 rue des Champs Elysées</p>-->
@@ -39,9 +97,9 @@
                 <!--</div>-->
 
       
-    </div>
-  </div>
-</div>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 
 

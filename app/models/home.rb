@@ -13,4 +13,6 @@ class Home < MailForm::Base
       :from => %("#{name}" <#{email}>)
     }
   end
+  
+  
 end

@@ -23,8 +23,8 @@ def show
     @order_items = current_order.order_items
    
 
-    OrderMailer.order_send(@order, @client).deliver
-    flash[:notice] = "Order has been sent."
+    # OrderMailer.order_send(@order, @client).deliver
+    # flash[:notice] = "Order has been sent."
     
 end
 end

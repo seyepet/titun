@@ -1,25 +1,18 @@
 Rails.application.routes.draw do
   
-  # resources :retrofits
   
-  # get 'home/index'
-  # get 'home/add'
- 
-  
-  # resources :home
-#   resources :solarworks
-  
-  # resources :categories
   resources :posts
   devise_for :users
   
   # get 'people#index'
-  # get 'home/index' 
-  get 'home/contact_form' 
-  post 'home/contact_form' 
-  # get 'home/contact_form' => 'home#index'
-  # get 'contacts/new' => 'dreamscomputers#show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  match 'home/index' , via: [:get, :post]
+  
+  #get 'home/contact_form' 
+  resources :home, only: [:index, :new, :create]
+  
+  
+  
+ 
    get '/search' => 'products#search', :as => 'search_page'
 
   root to: 'categories#index'
