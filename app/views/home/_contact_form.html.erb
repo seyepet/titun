@@ -1,9 +1,7 @@
 <!-- app/views/home/_contact_form.html.erb -->
 
-<%#= form_for @contact, url: home_index_path, remote: true do |f| %>
-<%#= form_for(@contact, url: home_index_path) remote: true do |f| %>
-<%= form_for @contact, as: :post, url: home_index_path, remote: true do |f| %>
-<%#= form_for @contact, url: home_index_path, remote: true do |f| %>
+<%= form_with scope: :home,  url: home_index_path, remote: true do |f| %>
+
     <div class="col-md-12">
         <%= f.label :name, class: "form-label" %></br>
         <%= f.text_field  :name, required: true, class: "contact-form-text-area" , class: "form-control"%></br>

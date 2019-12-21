@@ -12,13 +12,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
-                <h4><li class="nav-item">
+                <!--<h4><li class="nav-item">-->
                     <%#= link_to "See Freelancers", root_path, id: "prov", class: 'navbar-brand' %>
                   
-                </li></h4>
-               <h4> <li class="nav-item">
+                <!--</li></h4>-->
+               <!--<h4> <li class="nav-item">-->
                      <%#= link_to "See Retailers", category_products_path, id: "prov", class: 'navbar-brand' %>
-                </li></h4>
+                <!--</li></h4>-->
                 <!--<li class="nav-item">-->
                 <!--   <%#= link_to "News", people_ticker_path, id: "prov", class: 'navbar-brand' %>-->
                 <!--</li>-->
@@ -28,20 +28,20 @@
                <h4> <li class="nav-item">
                     <a class="navbar-brand" href="https://form.myjotform.com/seyepet/wholesale-purchase-order-form">Order Now </a>
                 </li></h4>
-                <h4><li class="nav-item">
+                <!--<h4><li class="nav-item">-->
                     <%#= link_to "Contact", root_path, id: "prov", class: 'navbar-brand' %>
-                </li></h4>
+                <!--</li></h4>-->
             </ul>
 
-<%= form_tag(search_page_path, :method => "get",   
+<%#= form_tag(search_page_path, :method => "get",   
     class: 'navbar-form navbar-left') do %>  
-  <div class="input-group">  
-    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
-    <div class="input-group-btn">  
-      <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
-    </div>  
-  </div>  
-<% end %>
+  <!--<div class="input-group">  -->
+    <%#= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+  <!--  <div class="input-group-btn">  -->
+      <%#= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+  <!--  </div>  -->
+  <!--</div>  -->
+<%# end %>
 
 
 
@@ -79,11 +79,11 @@
  <!--                       </div>-->
                         <!--end of col-->
  <!--                   </div>-->
-</div>
+<!--</div>-->
 
 
 
-            <form class="form-inline my-2 my-lg-0">
+            <!--<form class="form-inline my-2 my-lg-0">-->
                 <!--<div class="input-group input-group-sm">-->
                 <!--    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">-->
                 <!--    <div class="input-group-append">-->
@@ -110,7 +110,7 @@
                   <%= link_to "Login", new_user_session_path, :class => 'navbar-brand'  %>
                 <% end %>
                 </a>
-            </form>
+            <!--</form>-->
         </div>
     </div>
 </nav>
