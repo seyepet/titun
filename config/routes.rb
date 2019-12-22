@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   
-  match '/homes',     to: 'homes#new',             via: 'get'
+  match '/homes',     to: 'homes#new',             via: 'get, post'
   resources "contacts", only: [:new, :create]
   
   

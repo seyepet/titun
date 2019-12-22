@@ -1,6 +1,9 @@
 <!-- app/views/home/_contact_form.html.erb -->
-
-<%= form_with scope: :home,  url: home_index_path, remote: true do |f| %>
+<br>
+<div class="col-md-6" id="flash-message">
+    <%= render 'flash' %>
+  </div>
+<%= form_for @contact, url: home_index_path, remote: true do |f| %>
 
     <div class="col-md-12">
         <%= f.label :name, class: "form-label" %></br>
@@ -23,9 +26,7 @@
       <%= f.submit 'Send Message', class: 'btn btn-primary' %>
     </div>
   <% end %>
-  <div class="col-md-6" id="flash-message">
-    <%= render 'flash' %>
-  </div>
+  
 
 
 
