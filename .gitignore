@@ -37,5 +37,5 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-GMAIL_USERNAME=akobelimited@gmail.com
-GMAIL_PASSWORD=@akobelimited@olukemi1
+GMAIL_USERNAME=yourbizcenter1@gmail.com
+GMAIL_PASSWORD=center@123
