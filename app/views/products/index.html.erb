@@ -12,7 +12,7 @@
 </nav>
 
 
- <div class="card-group">
+ <div class="card-group" style="margin-botom:10px">
     <div class="container">
      <div class="card-deck">
         <!--<div class="album text-muted">-->
@@ -23,7 +23,7 @@
                  <div class="card card mb-3 style="max-width: 8rem;", class: "mx-auto d-block">
                  <h5 class="card-title  text-center"  style="margin-top: 10px; margin-bottom:-13px;"><%= product.vendor %> <br>(<%= product.speciality %> )</h5>
                    <%= link_to image_tag  product.image, class: "img-responsive img-thumbnail",  class: "h-100 d-inline-block", class: "w-100 p-5" %></a>
-                    <h5 class="card-title  text-center"  style="margin-top: -8px; margin-bottom:5px;"><%= product.title %> <br>₦(<%= product.price %>)</h5>
+                    <h5 class="card-title  text-center"  style="margin-top: -8px margin-bottom:5px;"><%= product.title %> <br>₦(<%= product.price %>)</h5>
                    <div class="row">
                      <div class="col">
                      <%= form_tag order_items_path do %>
@@ -50,7 +50,12 @@
 
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
 
 
 
