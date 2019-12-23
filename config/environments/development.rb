@@ -7,12 +7,12 @@ Rails.application.configure do
   config.cache_classes = false
   
   # config/initializers/recaptcha.rb
-  Recaptcha.configure do |config|
-    config.site_key  = '6LcL66IUAAAAAA_kQHU1997bGbxO1TkNATWk5jqj'
-    config.secret_key = '6LcL66IUAAAAANmMZVMtuzP1Eqc1INSQPrdzGFfZ'
-    # Uncomment the following line if you are using a proxy server:
-    config.proxy = 'http://https://28ee0248daf84dc6acd4c61b427f67f7.vfs.cloud9.us-east-2.amazonaws.com/.au:8080'
-  end
+  # Recaptcha.configure do |config|
+  #   config.site_key  = '6LcL66IUAAAAAA_kQHU1997bGbxO1TkNATWk5jqj'
+  #   config.secret_key = '6LcL66IUAAAAANmMZVMtuzP1Eqc1INSQPrdzGFfZ'
+  #   # Uncomment the following line if you are using a proxy server:
+  #   config.proxy = 'http://https://28ee0248daf84dc6acd4c61b427f67f7.vfs.cloud9.us-east-2.amazonaws.com/.au:8080'
+  # end
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -82,11 +82,11 @@ Rails.application.configure do
   
   
   
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default :charset => "utf-8"
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
   address: 'smtp.gmail.com',
   port: 587,
@@ -95,7 +95,7 @@ Rails.application.configure do
   password: ENV["GMAIL_PASSWORD"],
   authentication: 'plain',
   enable_starttls_auto: true }
-  config.action_mailer.default_url_options = {:host => "localhost:3000"}  
+  # config.action_mailer.default_url_options = {:host => "localhost:3000"}  
   
 #   config.action_mailer.raise_delivery_errors = true
 #   config.action_mailer.delivery_method = :smtp

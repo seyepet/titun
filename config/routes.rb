@@ -4,12 +4,12 @@ Rails.application.routes.draw do
   devise_for :users
   
   
-  match '/homes',     to: 'homes#new',             via: 'get, post'
+  match '/home',     to: 'home#index',             via: 'get, post'
   resources "contacts", only: [:new, :create]
   
   
-  # get 'home/index'
-  # post 'home/index'
+  #get 'home/index'
+  #post 'home/index'
   resources :home, only: [:index, :new, :create]
   
    get '/search' => 'products#search', :as => 'search_page'

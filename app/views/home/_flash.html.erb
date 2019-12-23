@@ -1,6 +1,6 @@
 <div class="col-sm-12" >
     <% flash.each do |message_type, message| %>
-  <h1 style="font:100px"> <%= content_tag(:div, message, class: "alert alert-#{message_type}") %></h1> 
+  <h4 style="font:100px"> <%= content_tag(:div, message, class: "alert alert-#{message_type}") %></h4> 
 <% end %>
 </div>
 
