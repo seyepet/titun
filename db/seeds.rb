@@ -79,17 +79,17 @@ solarwork = Category.create!(title: 'Solar and Renewable Energy Products')
 adeapartment = Category.create!(title: 'Ade Property')
 marketplace = Category.create!(title: 'Marketplace')
 dreamscomputer = Category.create!(title: 'Computers & Accessories')
-webappclass = Category.create!(title: 'Web Programming Classes')
+appdevclass = Category.create!(title: 'App. Programming Classes')
 sewing = Category.create!(title: 'Industrial & Domestic Sewing Machines')
 
 
 
-sewing.products.create(title: "Emel Industrial Straight Sewing Machine", price: 90000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Ruby on Rails, Postgresql, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/sewingmachine/ed.png')
+sewing.products.create(title: "Emel Industrial Straight Sewing Machine", price: 90000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Ruby on Rails, Postgresql, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/sewingmachine/emelstraightsewing.png')
 
-webappclass.products.create(title: "Ruby on Rails", price: 120000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Ruby on Rails, Postgresql, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/rubylogo.png')
-webappclass.products.create(title: "NodeJS", price: 120000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "NodeJs, MongoDB/MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/nodejslogo.png')
-webappclass.products.create(title: "PHP", price: 12000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "PHP, MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/php.jpg')
-webappclass.products.create(title: "Front End Bootstrap", price: 70000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Bootstrap, JavaScript/JQuery, HTML, CSS, Hosting", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/bootstraplogo.png')
+appdevclass.products.create(title: "Ruby on Rails", price: 120000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Ruby on Rails, Postgresql, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/rubylogo.png')
+appdevclass.products.create(title: "NodeJS", price: 120000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "NodeJs, MongoDB/MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/nodejslogo.png')
+appdevclass.products.create(title: "PHP", price: 12000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "PHP, MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/php.jpg')
+appdevclass.products.create(title: "Front End Bootstrap", price: 70000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Bootstrap, JavaScript/JQuery, HTML, CSS, Hosting", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/bootstraplogo.png')
 
 aluminiumfabricators.products.create(title: "Casement Window 4x4 Normal", price: 37000, vendor: "Ola Aluminium.", speciality: "Aluminium Fabricator", description: "Aluminium Casement Window with Protector", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/aluminiumservices/Ola+Alunminium.png')
 aluminiumfabricators.products.create(title: "Casement Window 4x4 Thick Imported", price: 40000, vendor: "B. S. Olu Aluminium.", speciality: "Aluminium Fabricator", description: "Aluminium Casement Window with Protector", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/aluminiumservices/b_s_olu.png')
