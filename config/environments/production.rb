@@ -87,7 +87,7 @@ Rails.application.configure do
   
   config.action_mailer_default_url_options = { host: 'http://akobe.org' }
   Rails.application.routes.default_url_options[:host] = 'http://akobe.org'
-  config.action_mailer.default_url_options = { :host => 'gmail.com' }  
+  config.action_mailer.default_url_options = { :host => 'http://akobe.org' }  
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = false  
