@@ -1,4 +1,10 @@
-<br><br>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("demo-form").submit();
+       }
+     </script>
+     <br><br>
 <br>
 
 <div class="container">
@@ -22,7 +28,7 @@
 									 
 									  
 										<h4 class="nomargin"><%= item.product.title %></h4>
-										<!--<p>Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>-->
+										
 									</div>
 								</div>
 							</td>
@@ -30,26 +36,26 @@
 							<td data-th="Quantity">
 								<%= item.quantity %>
 							</td>
-							<% invisible_captcha%>
+						
+							 <form id='demo-form' action="?" method="POST">
+      <button class="g-recaptcha" data-sitekey="6LcL66IUAAAAAA_kQHU1997bGbxO1TkNATWk5jqj" data-callback='onSubmit'></button>
+      <br/>
+    </form>
 							
-							<td class="actions" data-th="">
-								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
-							</td>
+							
 						</tr>
 					</tbody>
 					<tfoot>
-						<!--<tr class="visible-xs">-->
-						<!--	<td class="text-center"><strong>Total 1.99</strong></td>-->
-						<!--</tr>-->
+					
 						<tr>
-							<td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+							<td><%= link_to "Continue Shopping", root_path, id: "prov", class: "btn btn-primary" %>
+							</td>
 							<td colspan="2" class="hidden-xs"></td>
 							 
 							<td class="text-center"><strong><%= form_for item, method: :delete do |f| %>
-            <%= f.submit "Remove" %>
+            <%= f.submit "Remove", class: "btn btn-secondary" %>
           <% end %></strong></td>
-							<td>	<%= link_to 'Checkout', checkout_path,class:'btn btn-success btn-block', class: 'fa fa-angle-right' %></td>
+							<td>	<%= link_to 'Checkout', checkout_path, class:'btn btn-warning btn-block' %></td>
 						</tr>
 						<% end %>
 					</tfoot>
@@ -62,39 +68,6 @@
 
 
 
-
-<!--<h2>Current Cart</h2>-->
-
-<!--<table>-->
-<!--  <thead>-->
-<!--    <tr>-->
-<!--      <td>Product</td>-->
-<!--      <td>Price</td>-->
-<!--      <td>Quantity</td>-->
-<!--      <td></td>-->
-<!--    </tr>-->
-<!--  </thead>-->
-<!--  <tbody>-->
-    <%# @items.each do |item| %>
-<!--      <tr>-->
-        <td><%#= item.product.title %></td>
-        <td><%#= number_to_currency item.price %></td>
-        <td><%#= item.quantity %></td>
-<!--        <td>-->
-          <%#= form_for item, method: :delete do |f| %>
-            <%#= f.submit "Remove" %>
-          <%# end %>
-<!--        </td>-->
-<!--      </tr>-->
-    <%# end %>
-<!--  </tbody>-->
-<!--</table>-->
-
-<%#= link_to 'Checkout', checkout_path %>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<hr>
+<script>
+	grecaptcha.execute();
+</script>

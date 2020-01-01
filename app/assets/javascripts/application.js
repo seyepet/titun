@@ -18,3 +18,7 @@
 //= require_tree .
 
 
+
+<script>
+	grecaptcha.execute();
+</script>
