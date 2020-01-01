@@ -19,6 +19,3 @@
 
 
 
-<script>
-	grecaptcha.execute();
-</script>
