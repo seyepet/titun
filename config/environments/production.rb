@@ -84,10 +84,9 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   
   
-  
-  config.action_mailer_default_url_options = { host: 'http://akobe.org' }
-  Rails.application.routes.default_url_options[:host] = 'http://akobe.org'
-  config.action_mailer.default_url_options = { :host => 'http://akobe.org' }  
+  config.action_mailer.delivery_method = :smtp
+  host = 'akobe.org' 
+  config.action_mailer.default_url_options = { host: host }
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = false  
@@ -99,7 +98,8 @@ Rails.application.configure do
   user_name:            ENV["GMAIL_EMAIL"],
   password:             ENV["GMAIL_PASSWORD"],
   authentication:       'plain',
-  enable_starttls_auto: true  }
+  enable_starttls_auto: true  
+  }
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify

@@ -27,7 +27,7 @@
 /config/master.key
 /config/secrets.yml
 /config/secrets.config
-.env
+/.env
 /storage_access_key
 /storage.yml
 
@@ -37,5 +37,3 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-GMAIL_USERNAME=yourbizcenter1@gmail.com
-GMAIL_PASSWORD=center@123
