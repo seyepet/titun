@@ -84,9 +84,8 @@ Rails.application.configure do
   config.i18n.fallbacks = true
   
   
-  config.action_mailer.delivery_method = :smtp
-  host = 'akobe.org' 
-  config.action_mailer.default_url_options = { host: host }
+ 
+  config.action_mailer.default_url_options = { host: "http://www.akobe.org" }
   config.action_mailer.delivery_method = :smtp  
   config.action_mailer.perform_deliveries = true  
   config.action_mailer.raise_delivery_errors = false  
@@ -94,7 +93,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
   address:              'smtp.sendgrid.net',
   port:                 587,
-  domain:               'mail.google.com',
+  domain:               'akobe.org',
   user_name:            ENV['SENDGRID_USERNAME'],
   password:             ENV['SENDGRID_PASSWORD'],
   authentication:       :login,
