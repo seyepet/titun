@@ -1,11 +1,14 @@
 <!-- app/views/home/_contact_form.html.erb -->
 <br>
+
 <div class="col-md-6" id="flash-message">
     <%= render 'flash' %>
   </div>
+  
 <%= form_for @contact, url: home_index_path, remote: true do |f| %>
 
     <div class="col-md-12">
+        <h1 class="text-sm-center"class="text-center" style="font-weight:light; font-style:italic">Kindly describe Your Project or ask for a quotation</h1>
         <%= f.label :name, class: "form-label" %></br>
         <%= f.text_field  :name, required: true, class: "contact-form-text-area" , class: "form-control"%></br>
 
@@ -14,7 +17,7 @@
 
       <%= f.label :message , class: "form-label"%></br>
       <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                        placeholder: "Send me a message", class: "form-control"%></br>
+                        placeholder: "Please describe your project here e.g I need a mechanic at Ajah Lagos or build me a website now or I need 10 brick layers or I want to buy Emel Industrial sewing machine", class: "form-control"%></br>
 
       <div class= "hidden">
         <%= f.label :nickname %>
