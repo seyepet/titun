@@ -1,0 +1,44 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+
+<div class="container">
+  <!--<h2>Featured Partners</h2>-->
+   <section class="customer-logos slider">
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/Inspiring+homes.+(1).jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/aluminium_bsolu.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/auto_mechanic_ronix.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/check_out.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/marketplace_usiness_incubator.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/reseacher_data_analyst_peter.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/join_us.jpg"></div>
+      <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/Inspiring+homes.+(1).jpg"></div>
+      <!--<div class="slide"><img src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>-->
+   </section>
+   
+
+</div>
+
+
+<script>
+    $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
