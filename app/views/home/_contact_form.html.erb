@@ -8,16 +8,16 @@
 <%= form_for @contact, url: home_index_path, remote: true do |f| %>
 
     <div class="col-md-12">
-        <h1 class="text-sm-center"class="text-center" style="font-weight:light; font-style:italic">Kindly describe Your Project or ask for a quotation</h1>
+        <h1 class="text-sm-center"class="text-center" style="font-weight:light; font-style:italic; font-size: 2vw"> Describe your project or ask for a quotation</h1>
         <%= f.label :name, class: "form-label" %></br>
-        <%= f.text_field  :name, required: true, class: "contact-form-text-area" , class: "form-control", placeholder: "Give your project a name e.g 10 plumbers/script writers/laptops needed"%></br>
+        <%= f.text_field  :name, required: true, class: "contact-form-text-area;" , class: "form-control", id: "contactform1", placeholder: "Give your project a name e.g I need 10 plumbers or 5 laptops"%></br>
 
         <%= f.label :email, class: "form-label" %></br>
-        <%= f.text_field :email, required: true, class: "contact-form-text-area", class: "form-control" %></br>
+        <%= f.text_field :email, required: true, class: "contact-form-text-area", class: "form-control", id: "contactform1" %></br>
 
       <%= f.label :message , class: "form-label"%></br>
       <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-                        placeholder: "Please describe your project here e.g I need a mechanic at Ajah Lagos or build me a website now or I need 10 brick layers or I want to buy Emel Industrial sewing machine", class: "form-control"%></br>
+                        placeholder: "Please describe your project here e.g I need a mechanic at Ajah Lagos or build me a website now or I need 10 brick layers or I want to buy Emel Industrial sewing machine", class: "form-control", id: "contactform1"%></br>
 
       <div class= "hidden">
         <%= f.label :nickname %>
