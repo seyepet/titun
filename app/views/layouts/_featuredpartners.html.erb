@@ -1,8 +1,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
 <div class="container">
-  <!--<h2>Featured Partners</h2>-->
+ 
+  <h1 id=" featured"  class="text-capitalize text-center">Featured Partners </h1>
    <section class="customer-logos slider">
+    
+       
       <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/automechanic_ronix.jpg"></div>
       <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/alunimium_bsolu.jpg"></div>
       <div class="slide"><img src="https://babanla.s3.us-east-2.amazonaws.com/assets/featured/software_developers!.jpg"></div>
@@ -22,24 +25,26 @@
 <script>
     $(document).ready(function(){
     $('.customer-logos').slick({
-        slidesToShow: 6,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 2000,
         arrows: false,
         dots: false,
         pauseOnHover: false,
         responsive: [{
             breakpoint: 768,
             settings: {
-                slidesToShow: 4
+                slidesToShow: 3
             }
         }, {
             breakpoint: 520,
             settings: {
-                slidesToShow: 3
+                slidesToShow: 1
             }
         }]
     });
 });
 </script>
+
+

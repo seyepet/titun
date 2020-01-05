@@ -14,6 +14,8 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
 gem 'mail_form'
 
+
+
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 
 gem 'dotenv-rails', groups: [:development, :test]
