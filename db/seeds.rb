@@ -49,7 +49,7 @@
 
 # end
 
-
+tailoringservices = Category.create(title: "Tailoring & Embroidery")
 aluminiumfabricators = Category.create(title: "Aluminium Fabricators")
 intellectualproperties = Category.create(title: "Intellectual Property")
 businessregistrations = Category.create(title: "Business Registration")
@@ -81,6 +81,7 @@ marketplace = Category.create!(title: 'Marketplace')
 dreamscomputer = Category.create!(title: 'Computers & Accessories')
 appdevclass = Category.create!(title: 'App. Programming Classes')
 sewing = Category.create!(title: 'Industrial & Domestic Sewing Machines')
+printers = Category.create!(title: 'Direct Image (DI) and ID Card Printers')
 
 
 
@@ -90,6 +91,18 @@ appdevclass.products.create(title: "Ruby on Rails", price: 100000, vendor: "Hard
 appdevclass.products.create(title: "NodeJS", price: 100000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "NodeJs, MongoDB/MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/nodejslogo.png')
 appdevclass.products.create(title: "PHP", price: 100000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "PHP, MYSQL, JavaScript/JQuery, HTML, CSS, Hosting, Bootstrap", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/php.jpg')
 appdevclass.products.create(title: "Front End Bootstrap", price: 50000, vendor: "Hard Skill Hub", speciality: "Web App Development", description: "Bootstrap, JavaScript/JQuery, HTML, CSS, Hosting", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/programminglogo/bootstraplogo.png')
+
+tailoringservices.products.create(title: "Tailoring & Embroidery", price: 10000, vendor: "KPWears", speciality: "Tailoring", description: "Buba (Top), Trouser and Agbada with Embroidery", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/kpwears_tailoring.jpg')
+tailoringservices.products.create(title: "Tailoring & Embroidery", price: 4000, vendor: "KPWears", speciality: "Tailoring", description: "Buba (Top) and Trouser with Embroidery", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/kpwears_tailoring.jpg')
+
+
+printers.products.create(title: "Konica Minolta C452 (Tokunbo)", price: 400000, vendor: "PS_Printers", speciality: "Printers", description: "DI printer, A3 A4 A5 Direct-image printer, handles high-volume document traffic with razor-sharp text and fine-line detail to give graphics and halftones greater impact.", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/diprinter_p.jpg')
+printers.products.create(title: "Konica Minolta (Tokunbo)", price: 350000, vendor: "PS_Printers", speciality: "Printers", description: "DI printer, A3 A4 A5 Direct-image printer, handles high-volume document traffic with razor-sharp text and fine-line detail to give graphics and halftones greater impact.", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/diprinter_p.jpg')
+printers.products.create(title: "Konica Minolta (Tokunbo)", price: 300000, vendor: "PS_Printers", speciality: "Printers", description: "DI printer, A3 A4 A5 Direct-image printer, handles high-volume document traffic with razor-sharp text and fine-line detail to give graphics and halftones greater impact.", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/diprinter_p.jpg')
+printers.products.create(title: "Konica Minolta (Tokunbo)", price: 250000, vendor: "PS_Printers", speciality: "Printers", description: "DI printer, A3 A4 A5 Direct-image printer, handles high-volume document traffic with razor-sharp text and fine-line detail to give graphics and halftones greater impact.", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/diprinter_p.jpg')
+printers.products.create(title: "Fargo DTC1250e ID Card Printer - Dual-Sided", price: 250000, vendor: "PS_Printers", speciality: "Printers", description: "The ideal card printing solution for small businesses, schools, and local governments, the FARGO® DTC1250e card printer/encoder is the fastest printer in its class", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/idera_printers.jpg')
+printers.products.create(title: "Fargo DTC1250e ID Card Printer - Dual-Sided (New)", price: 400000, vendor: "PS_Printers", speciality: "Printers", description: "The ideal card printing solution for small businesses, schools, and local governments, the FARGO® DTC1250e card printer/encoder is the fastest printer in its class.", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/featured/idera_printers.jpg')
+
 
 aluminiumfabricators.products.create(title: "Casement Window 4x4 Normal", price: 37000, vendor: "Ola Aluminium.", speciality: "Aluminium Fabricator", description: "Aluminium Casement Window with Protector", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/aluminiumservices/Ola+Alunminium.png')
 aluminiumfabricators.products.create(title: "Casement Window 4x4 Thick Imported", price: 40000, vendor: "B. S. Olu Aluminium.", speciality: "Aluminium Fabricator", description: "Aluminium Casement Window with Protector", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/aluminiumservices/b_s_olu.png')
@@ -106,12 +119,12 @@ intellectualproperties.products.create(title: "Copyright", price: 50000,vendor: 
 intellectualproperties.products.create(title: "Design Registration", price: 70000,vendor: "Olawale M.", speciality: "Aluminium Fabricator", description: "Windows, Doors an Partionning", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
 intellectualproperties.products.create(title: "Service Mark", price: 50000, vendor: "Olawale M.", speciality: "Aluminium Fabricator", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
 
-businessregistrations.products.create(title: "Business title Registration", price: 25000, vendor: "Adeseye M.", speciality: "Buisness title Registration", description: "Enterprise/Ventures Registration",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
-businessregistrations.products.create(title: "Company Incorporation", price: 50000, vendor: "Marketplace.", speciality: "Business Registration", description: "Business Registration as Limited(LTD) ",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/akobeshops/company_incorporation.PNG')
-businessregistrations.products.create(title: "NGO Registration", price: 100000, vendor: "Onisola V.", speciality: "Business Registration", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
-businessregistrations.products.create(title: "Registration of Group of Companies Registration", price: 1, vendor: "Onisola V.", speciality: "Business Registation", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
-businessregistrations.products.create(title: "Registration of Holding Companies", price: 2,vendor: "List here", speciality: "List here", description: "List Here", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
-businessregistrations.products.create(title: "Registration of Consortium companies", price: 1,vendor: "List here.", speciality: "List here", description: "List Here", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
+businessregistrations.products.create(title: "Business title Registration", price: 25000, vendor: "Adeseye M.", speciality: "Buisness Name Registration", description: "Enterprise/Ventures Registration",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
+businessregistrations.products.create(title: "Company Incorporation", price: 50000, vendor: "Marketplace.", speciality: "Company Incorporation", description: "Business Registration as Limited(LTD) ",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/akobeshops/company_incorporation.PNG')
+businessregistrations.products.create(title: "NGO Registration", price: 100000, vendor: "Onisola V.", speciality: "NGO Registration", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
+businessregistrations.products.create(title: "Registration of Group of Companies Registration", price: 1, vendor: "Onisola V.", speciality: "Registration of Group Registation", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
+businessregistrations.products.create(title: "Registration of Holding Companies", price: 2,vendor: "List here", speciality: "List here", description: "Registration of Holding Companies", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
+businessregistrations.products.create(title: "Registration of Consortium companies", price: 1,vendor: "List here.", speciality: "List here", description: "Registration of Consortium companies", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
 
 mechanics.products.create(title: "A. Ronis Autofix Car Fix", price: 1, vendor: "Ronis A.", speciality: "Car Repairs and Maintenance and Fleet management", description: "Windows, Doors an Partionning",image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/automechanic/ronis_a.png')
 mechanics.products.create(title: "Engine Scan", price: 1,vendor: "List Here", speciality: "List Here", description: "List Here", image: 'https://babanla.s3.us-east-2.amazonaws.com/assets/avatar1.png')
