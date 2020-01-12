@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
     
     # before_action :find_user_object,except:[:create]
-    invisible_captcha only: [:orders, :products, :order_items, :categories]
+    # invisible_captcha only: [:orders, :products, :order_items, :categories]
     
      def index
          

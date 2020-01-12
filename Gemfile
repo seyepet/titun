@@ -7,7 +7,7 @@ gem 'devise'
 
 gem "recaptcha"
 
-# gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
 
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 
