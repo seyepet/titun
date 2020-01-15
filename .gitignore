@@ -31,7 +31,7 @@
 /storage_access_key
 /storage.yml
 .env
-
+/recaptcha.rb
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

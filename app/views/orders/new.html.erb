@@ -1,3 +1,4 @@
+
 <br><br><br>
   
     <div class="container">
@@ -38,8 +39,10 @@
                 <%= f.text_field :phone_number, class: "form-control", placeholder: "Phone Number", :required => 'required' %>
              <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
             </div>
+            <div class="g-recaptcha" data-sitekey="6LfYpM4UAAAAAM72CIuIEX2xDs31QIUlocDrCyKo"></div>
             <div class="modal-footer">
                  <%= f.submit 'Checkout',class: "btn btn-primary" %>
+                 
             </div>     
 
                 <% end %>

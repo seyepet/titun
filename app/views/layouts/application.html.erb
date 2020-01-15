@@ -17,13 +17,9 @@
  <script src="https://www.google.com/recaptcha/api.js"  async defer></script>
  <meta name='description'
       content='<%= yield_meta_tag(:description, 'We are a Community of Service Providers, Retailers and Freelancers. Community Members offers Reliable Services and Best Quality for the Best Price and also Give Cash Back to the Customers') %>' />
-<!--<meta name='keywords'-->
-<!--      content='<%#= yield_meta_tag(:keywords, 'Electronics, Foods, Vehicles, Services, Gloceries, Web Technologies, Clothes, Sola Panels, Inverter Batteries, Auto Mechanic, Research') %>' />-->
 
- <!--<title>-->
- <!--    <%#= if content_for?(:title) then yield(:title) + ' | ' end %>-->
- <!--     Akobe Limited-->
- <!--    </title>-->
+ 
+ 
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -43,7 +39,7 @@
 
   gtag('config', 'UA-155367779-1');
 </script>
-
+<%= yield :recaptcha_js %>
 
 </head>
 
